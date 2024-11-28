@@ -322,7 +322,7 @@ section:target {
     border-radius: 100%;
     margin-right: 25px;
     /* background-color: #1d1b19; à enelver lorsque la photo du CV sera bonne */
-    background-image: url(../images/Contour\ gris\ x1.png);
+    background-image: url(../images/Contour-gris-x1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
