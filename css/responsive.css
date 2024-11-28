@@ -1,0 +1,192 @@
+/* Responsive du site web en fonction de la largeur */
+
+/* Largeur de 1300px ou moins*/
+@media (max-width: 1300px) {
+
+    .mobile-menu {
+        display: flex; /* Affiche le menu mobile */
+    }
+
+    /*le menu se situe en dessous du mobile-menu*/
+    .menu {
+        display: none; /* Masque le menu normal */
+        margin: 0;
+        padding: 0;
+        position: fixed; /* Positionne le menu en bas de l'écran */
+        left: 0; /* Aligne à gauche */
+        right: 0; /* Aligne à droite */
+        bottom: 0; /* Aligne en bas */
+        height: calc(100vh - 80px); /* Prendre toute la hauteur de la fenêtre, moins la hauteur du menu-mobile (80px)*/
+        z-index: 1000; 
+        background:#333231;
+        box-shadow: none;
+    }
+
+    /*Positionnement des balises a*/
+    .menu-container {
+        width: 100%;
+        height: 100%; 
+        flex-direction: column;
+        justify-content: center;    
+    }
+
+    .out-menu-listing {
+        width: 100vw;
+        flex-direction: column;    
+    }
+
+    .accueil {
+        transition: none; /*plus de transition*/
+        color: rgb(255, 166, 0);
+    }
+
+    /*On remplace le background par la couleur du texte*/
+    .accueil:hover {
+        background-color:unset;
+    }
+
+    .menu-listing {
+        width: 100vw;
+        margin: 0; /*permet de coller out-menu-listing et menu-listing*/
+        flex-direction: column;
+    }
+
+    .menu-listing li {
+        margin:auto; /*enlève la marge de base et centre automatiquement*/
+        margin-top: 10px; /*ajoute un espace (vers le haut) entre les éléments*/
+    }
+
+    /*Changement du couleur du texte lors du clique*/
+    .menu-listing a:hover {
+        color: #a8834a;
+    }
+
+    /*enlève la ligne/barre sous les balises li de la navbar*/
+    .underline {
+        display: none;
+    }
+    
+    /*---- Section Présentation ------ GRILLE CSS ------*/
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    /* Positionne l'image en bas de la grille */
+    .grid-item-1 {
+        margin: 0;
+        grid-row: 3;
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* La photo en elle-même */
+    #grid-item-1-img {
+        width: 200px; /* Limite la taille maximale pour garder les proportions */
+        height: 200px; /* Garde les proportions */
+        margin-right: 0;
+    }
+
+    /* Titre placer en haut de la grille */
+    .grid-item-2 {
+        grid-row: 1;
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Modification de la taille de la police */
+    .grid-item-2 h2 {
+        font-size: 2rem;
+    }
+
+    /* Place le texte au centre de la grille */
+    .grid-item-3 {
+        grid-row: 2;
+        grid-column: 1;
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/*Largeur de 1100px ou moins*/
+@media (max-width: 1100px) { 
+    /*---- Section Contact ------ FORMULAIRE GRILLE CSS ------*/
+    .form-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+    }
+
+    /* Adresse mail */
+    .form-item-1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    /* Nom de famille */
+    .form-item-2 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    /* Prénom */
+    .form-item-3 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    /* Objet du message */
+    .form-item-4 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    /* Message */
+    .form-item-5 {
+        grid-column: 1;
+        grid-row: 6 / 7;
+    }
+
+    /* Aperçu du CV */
+    .form-item-6 {
+        grid-column: 1;
+        grid-row: 7;
+        padding-top: 0px;
+    }
+
+    /* Envoie du formulaire */
+    .form-item-7 {
+        grid-column: 1;
+        grid-row: 8;            
+        padding-top: 0px;
+    }
+
+    /* style des boutons CV et Envoie*/
+    #voirCV, #envoyerForm {
+        padding: 5px 12.5px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+}
+
+/*Largeur de 650px ou moins*/
+/* Media query pour les écrans de 650 pixels et moins */ 
+@media (max-width: 650px) { 
+    .carousel { 
+        max-width: 100%; /* Assure que le carrousel prend tout l'espace disponible */ 
+    } 
+    
+    .card-img { 
+        height: clamp(200px, 50vh, 300px); 
+    }
+    
+    .card-titre { 
+        font-size: 1.8rem; /* Réduit la taille du titre */ 
+    } 
+    .card-paragraphe { 
+        font-size: 1rem; /* Réduit la taille du texte */
+    }
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/manette.png"> <!-- Icon de ma page-->
+    <title>Portfolio Benjamin</title> <!-- Titre de ma page -->
+    <!-- Importation des icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <!-- Feuilles CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header role="Navbar" id="header">
+        <nav>
+            <!-- Menu Burger -->
+            <div class="mobile-menu">
+                <span class="material-symbols-outlined" id="toggler" onclick="toggler()">menu</span> <!-- Ne pas retirer "menu" sinon le menu n'apparaît plus si la résolution est trop basse au début-->
+            </div>
+            <!-- Menu d'origne visible quand la largeur est supérieure à 1300px-->
+            <div class="menu">
+                <div class="menu-container">
+                    <!-- Bouton accueil (en dehors du reste du menu)-->
+                    <div class="out-menu-listing">
+                        <a href="#home" class="accueil">
+                            <h1>Accueil</h1>
+                        </a>
+                    </div>
+                    <!-- Les points de navigation -->
+                    <ul class="menu-listing">
+                        <li><a href="#presentation">Présentation</a><span class="underline"></span></li>
+                        <li><a href="#competences">Compétences</a><span class="underline"></span></li>
+                        <li><a href="#projets">Projets</a><span class="underline"></span></li>
+                        <li><a href="#contact">Contact</a><span class="underline"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Home -->
+        <section id="home" role="Home">
+            <div class="home_titre">
+                <!-- Balise p car la balise <h> ne prenait pas en compte la police d'écriture -->
+                <p>Mon Portfolio</p>
+                <a href="#presentation" id="explorez">Explorez</a>
+            </div>
+        </section>
+        <!-- Section Présentation-->
+        <section id="presentation" role="Présentation">
+            <!-- Contenu de ma section présentation-->
+            <article class="grid-container" role="contenu Présentation">
+                <!-- Futur emplacement de ma photo -->
+                <div class="grid-item-1">
+                    <div id="grid-item-1-img"></div>
+                </div>
+                <!-- titre de mon article -->
+                <div class="grid-item-2">
+                    <h2>Qui suis-je ?</h2>
+                </div>
+                <!-- Le paragraphe pour me présenter -->
+                <div class="grid-item-3">
+                    <p> (Entre 100 et 110 mots) It is a long established fact that a reader will be distracted by the
+                        readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+                        has a more-or-less normal distribution of letters, as opposed to using 'Content here, content
+                        here, making it look like readable English. Many desktop publishing packages and web page
+                        editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
+                        uncover many web sites still in their infancy. Various versions have evolved over the years,
+                        sometimes by accident, sometimes on purpose (injected humour and the like).
+                        a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
+                        have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and
+                        the like).
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Section Compétences-->
+        <section id="competences" role="Compétences">
+            <!-- Contenu de l'article langages de programmation -->
+            <article role="Langages de programmation">
+                <!-- Titre de mon article -->
+                <p class="competences-titre">Langages de programmation</p>
+                <!-- Flexbox avec une image, un titre, un paragraphe et une progress bar-->
+                <div class="flex-box">
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-1"></div>
+                        <p>HTML</p>
+                        <div class="progress-container">
+                            <progress max="100" value="100"></progress>
+                            <span class="progress-text">100%</span>
+                        </div>
+                    </div>
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-2"></div>
+                        <p>CSS</p>
+                        <div class="progress-container">
+                            <progress max="100" value="60"></progress>
+                            <span class="progress-text">60%</span>
+                        </div>
+                    </div>
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-3"></div>
+                        <p>Javascript</p>
+                        <div class="progress-container">
+                            <progress max="100" value="10"></progress>
+                            <span class="progress-text">10%</span>
+                        </div>
+                    </div>
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-4"></div>
+                        <p>Python</p>
+                        <div class="progress-container">
+                            <progress max="100" value="40"></progress>
+                            <span class="progress-text">40%</span>
+                        </div>
+                    </div>
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-5"></div>
+                        <p>PHP5</p>
+                        <div class="progress-container">
+                            <progress max="100" value="10"></progress>
+                            <span class="progress-text">10%</span>
+                        </div>
+                    </div>
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-6"></div>
+                        <p>SQL</p>
+                        <div class="progress-container">
+                            <progress max="100" value="60"></progress>
+                            <span class="progress-text">60%</span>
+                        </div>
+                    </div>
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-7"></div>
+                        <p>C#</p>
+                        <div class="progress-container">
+                            <progress max="100" value="10"></progress>
+                            <span class="progress-text">10%</span>
+                        </div>
+                    </div>
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-8"></div>
+                        <p>JAVA</p>
+                        <div class="progress-container">
+                            <progress max="100" value="0"></progress>
+                            <span class="progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Contenu de l'article environnement -->
+            <article role="Environnements de développement">
+                <!-- Titre de mon article -->
+                <p class="competences-titre">Environnements de développement</p>
+                <div class="flex-box">
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-9"></div>
+                        <p>Netbeans</p>
+                    </div>
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-10"></div>
+                        <p>Visual Studio</p>
+                    </div>
+                    <div class="flex-box-item">
+                        <div class="flex-box-img" id="flex-box-img-11"></div>
+                        <p>Pycharm</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <!-- Section Projets -->
+        <section class="projets" id="projets" role="Projets">
+            <!-- Titre de mon article-->
+            <p class="projets-gros-titre">Mes réalisations</p>
+            <!-- Carrousel background : image des projets du plus récent au plus ancien. Donc plus le nombre de l'image est grande et plus le projet est récent -->
+            <div class="background-carousel">
+                <div class="background-slide" id="card-img-1"></div> <!-- 1er projet (visible à la fin)-->
+                <div class="background-slide" id="card-img-2"></div> <!-- 2ème projet -->
+                <div class="background-slide" id="card-img-3"></div> <!-- Projet le plus récent -->
+            </div>
+            <!-- Carrousel des projets (cards) du plus récent au plus ancien -->
+            <div class="carousel">
+                <div class="carousel-cards">
+                    <!-- Article le plus ancien -->
+                    <article class="card">
+                        <!-- Image du projet -->
+                        <div class="card-img" id="card-img-1"></div>
+                        <!-- Légende du projet -->
+                        <figcaption><i><a href="https://drive.google.com/drive/folders/1tHZr7pUzWxrP31ZgmyoUwzQ8GJt8zZmR?usp=sharing">Projet javascript</a> réalisé en NSI, avril-mai 2024</i></figcaption>
+                        <!-- Titre de l'article -->
+                        <p class="card-titre">HMMMM</p>
+                        <!-- Texte de l'article -->
+                        <p class=card-paragraphe>
+                            Pour notre dernier projet de Terminale en NSI, notre professeur nous a demandé de créer un projet 
+                            en JavaScript. Avec deux amis, nous avons mis 1 à 2 mois à réaliser ce site web en parallèle des 
+                            cours. Son but ? Faire perdre patience et temps aux joueurs. PS : Le site est entièrement fonctionnel 
+                            (et possède une fin) !
+                        </p>
+                    </article>
+                    
+                    <!-- 2ème article le plus ancien -->
+                    <article class="card">
+                        <!-- Vidéo du projet -->
+                        <iframe
+                        src="https://www.youtube-nocookie.com/embed/tcKAMduZ4XQ?controls=1&modestbranding=1&rel=0&showinfo=0"
+                        title="Portfolio : projet Unity n°1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                    
+                        <!-- Légende du projet -->
+                        <figcaption><i>Jeu (arrêté au bout du 11<sup>ème</sup> épisode) issu d'un <a href="https://www.youtube.com/watch?v=WtDXk6uuZO4">tutoriel youtube</a>, juillet 2024</i></figcaption> <!-- Attention la balise <sup> agrandit la taille du carrousel :/-->
+                        <!-- Titre de l'article -->
+                        <p class="card-titre">Jeu vidéo 2D</p>
+                        <!-- Texte de l'article -->
+                        <p class=card-paragraphe>
+                            Pour commencer à acquérir des connaissances en développement de jeux vidéo, j'ai suivi un 
+                            tutoriel d'un youtubeur français pour créer un jeu 2D. J'ai apprécié cette expérience, bien 
+                            que le projet soit resté inachevé en raison de bugs liés aux versions différentes du logiciel 
+                            et de la concentration nécessaire pour suivre de longs épisodes (37) de 30 minutes à 1 heure.
+                        </p>
+                    </article>
+
+                    <!-- Article le plus récent -->
+                    <article class="card">
+                        <!-- Vidéo du projet -->
+                        <iframe 
+                            src="https:/www.youtube-nocookie.com/embed/zlRJKp5lDWg" 
+                            title="Portfolio : Ropebound Rescue" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                        <!-- Légende du projet -->
+                        <figcaption><i>Kenney Jam 2024 : <a href="https://asxiox.itch.io/ropebound-rescue">Ropebound Rescue</a>, juillet 2024</i></figcaption>
+                        <!-- Titre de l'article -->
+                        <p class="card-titre">Ropebound Rescue</p>
+                        <!-- Texte de l'article -->                        
+                        <p class=card-paragraphe>
+                            Ropebound Rescue est un prototype de jeu créé lors de ma première game jam, un événement où 
+                            l'on développe un jeu sur un thème imposé en temps limité (ici 48h). Nous étions deux pour 
+                            concevoir ce jeu autour du thème “connexion” : une corde relie deux personnages contrôlés par 
+                            un seul joueur. Le but est d'activer des leviers pour avancer dans les niveaux.
+                        </p>
+                    </article>
+                </div>
+                <!-- Flèches pour le carrousel -->
+                <div class="carousel-arrows">
+                    <span class="prev-arrow">&#10094;</span>
+                    <span class="next-arrow">&#10095;</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact-->
+        <section id="contact" role="region" aria-labelledby="contact-title">
+            <!-- Fonction JS qui envoie une alerte au moment de l'envoie qui agit comme validation -->
+            <form action="#" method="post" class="form-container" onsubmit="return validateForm()">
+                <!-- Titre du formulaire-->
+                <p id="contact-title"><i>Contactez-moi</i></p>
+                <!-- Champs de texte du formulaire -->
+                <!-- Adresse mail de l'expéditeur -->
+                <div class="form-item-1">
+                    <label for="email">Adresse mail</label>
+                    <input id="email" type="email" name="emailName" autocomplete="off" placeholder="monadressemail@xxx.com" required>
+                </div>
+                <!-- Nom de l'expéditeur -->
+                <div class="form-item-2">
+                    <label for="nom">Nom</label>
+                    <input id="nom" name="nomName" type="text" placeholder="Nom de famille" required>
+                </div>
+                <!-- Prénom de l'expéditeur -->
+                <div class="form-item-3">
+                    <label for="prenom">Prénom</label>
+                    <input id="prenom" name="prenomName" type="text" placeholder="Prénom" required>
+                </div>
+                <!-- Objet du message -->
+                <div class="form-item-4">
+                    <label for="objet">Objet</label>
+                    <input id="objet" name="objetName" type="text" placeholder="Stage, emploi,..." required>
+                </div>
+                <!-- Contenu du message -->
+                <div class="form-item-5">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="messageName" placeholder="Je vous contacte à propos de ..." required></textarea>
+                </div>
+                <!-- Aperçu du cv dans un nouvel onglet -->
+                <div class="form-item-6">
+                    <a href="../documents/CV - TEMPORAIRE.pdf" id="voirCV" target="_blank">Aperçu de mon CV</a>
+                </div>
+                <!-- Bouton d'envoie du formulaire -->
+                <div class="form-item-7">
+                    <button type="submit" id="envoyerForm">Envoyer le formulaire</button>
+                </div>
+            </form>
+        </section>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/benjamin-delaunay-guitton-941518300/">
+                <img src="images/linkdin.webp" alt="LinkedIn" class="footer-logo">
+                <small>LinkedIn</small>
+            </a>
+            <!-- Droits de licence en abriéviation -->
+                <img src="images/copyright.png" alt="Droits de licence" class="footer-logo">
+                <small><abbr title="Freepiks, pour les images paysages">Droits</abbr></small>
+             </a>
+        </div>
+        <p>Page créée dans le cadre d'un TP en BTS SIO</p>
+    </footer>
+    <script src="javascript/script.js"></script>
+
+</body>
+
+</html>
