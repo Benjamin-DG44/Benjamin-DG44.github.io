@@ -1,0 +1,126 @@
+/*--------------- NAVBAR ---------------*/
+
+nav {
+    position: fixed; /* Reste en haut de l'écran */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    z-index: 100000000; /* navbar présente au-dessus de la page*/
+    
+}
+
+/* Les menus */
+/* Menus par défaut (>1300px)*/
+.menu {
+    display: block; /* Affiche le menu par défaut */
+    padding: 30px 20px;
+    width: 100%;
+    justify-content: center;
+    /* Ajout un effet de flou à la navbar */
+    background: linear-gradient(to bottom, rgba(46, 45, 45, 0.21) 0%, rgba(46, 45, 45, 0.05) 100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(1.5px);
+
+}
+/* Menu mobile (<1300px)*/
+.mobile-menu {
+    position: fixed;
+    display: none; /* Masqué par défaut */
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    padding-left: 30px; 
+    z-index: 100000001; /* Placer sur la navbar */
+    box-sizing: border-box;
+    /* Effet de flou */
+    background: linear-gradient(to bottom, rgba(46, 45, 45, 0.21) 0%, rgba(46, 45, 45, 0.05) 100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(1.5px);
+}
+
+/* Visuel du menu Burger */
+#toggler {
+    font-size: 36px; /* Ajuste la taille du menu burger */
+    cursor: pointer; /* Change le curseur en mode cliquable */
+    color: rgb(255, 166, 0); /* couleur du menu burger */
+}
+
+
+/* Contenu de la navbar */
+.menu-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Style du bouton Accueil */
+.out-menu-listing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+}
+
+.accueil {
+    color: white;
+    width: fit-content;
+    font-weight: 700; /* Largeur des lettres */
+    text-decoration: none;
+    font-size: 1.5rem; /* Taille de la police */
+    padding: 7px 25px;
+    border-radius: 30px;
+    transition: background-color 0.32s ease;
+    margin: auto;
+}
+
+.accueil:hover {
+    background-color: #a8834a;
+}
+
+/* Liste de navigation */
+.menu-listing {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    width: 80vw;
+}
+
+/* Éléments de la liste présente dans la navbar*/
+.menu-listing li {
+    margin-left:75px; /* Espace les éléments de 75px à gauche*/
+    position: relative;
+}
+
+/* Les liens de la navbar */
+.menu-listing a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block; /* place les éléments l'un en dessous de l'autre*/
+}
+
+/* Barre de soulignement pour chaque lien */
+.menu-listing li .underline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 3px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Animation gauche vers droite puis droite vers gauche */
+    transition: background-color 0.32s ease, transform 0.32s ease;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+/* Animation de remplissage au survol */
+.menu-listing li:hover .underline {
+    background-color: white;
+    transform: scaleX(1.01);
+}

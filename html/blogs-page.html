@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/manette.png"> <!-- Icon de ma page-->
+    <title>Page blogs</title> <!-- Titre de ma page -->
+    <!-- Importation des icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <!-- Feuilles CSS -->
+    <link rel="stylesheet" href="../css/blogs-page.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+</head>
+<body>
+    <!-- NAV BAR -->
+    <header id="header" role="Navbar">
+        
+    </header>
+    <main>
+        <!-- Section Dernière parution du blog-->
+        <section id="last-blog" role="dernier blog paru">
+            <article class="blog-last">
+                <p class="titre-blog-last">Blog</p>
+                <div class="grid-container">
+                    <h1 class="grid-item-1" id="titre">Titre du blog</h1>
+                    <p class="grid-item-2" id="date">10 janvier 2025</p>
+                    <p class="grid-item-3" id="resume"> Résumé du blog</p>
+                    <div class="grid-item-4" id="tag">
+                        <p>Tag1</p>
+                        <p>Tag2</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Section Filtres -->
+        <section id="menu-filtres" role="Menu filtres" >
+            <article class="filtre" role="filtres">
+                <div class="filtre-container">
+                    <button class="filtre-item-1">TOUT</button>
+                    <button class="filtre-item-2">Jeux vidéos</button>
+                    <button class="filtre-item-3">Études</button>
+                    <button class="filtre-item-4">Veilles technologiques</button>
+                    <button class="filtre-item-5">Autres</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Section Menu blogs -->
+        <section id="menu-blogs" role="Menu blogs">
+            <article class="blog" role="menu blogs">
+                <!-- Pour une image mettre la prorpiété css : filter : grayscale(100%) -->
+                 <div class="blog-container">
+                    <div class="blog-item-1" id="blog-image">image</div>
+                    <div class="blog-item-2" id="blog-date">date</div>
+                    <h1 class="blog-item-3" id="blog-titre">titre</h1>
+                    <div class="blog-item-4" id="blog-tags">
+                        <p>Tag1</p>
+                        <p>Tag2</p>
+                    </div>
+                 </div>
+            </article>
+            <!-- A remplir -->
+            <article class="blog" role="menu blogs">
+                
+            </article>
+            <article class="blog" role="menu blogs">
+                
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/benjamin-delaunay-guitton-941518300/">
+                <img src="../images/linkdin.webp" alt="LinkedIn" class="footer-logo">
+                <small>LinkedIn</small>
+            </a>
+            <!-- Droits de licence en abriéviation -->
+            <img src="../images/copyright.png" alt="Droits de licence" class="footer-logo">
+            <small><abbr title="Freepiks, pour les images paysages">Droits</abbr></small>
+        </div>
+    </footer>
+</body>

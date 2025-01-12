@@ -1,0 +1,15 @@
+/* Réinitialise les paramètres du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+html,
+body {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    font-family: "Khula-regular", sans-serif; /* Police appliquée à toute la page*/
+    scroll-behavior: smooth;
+}

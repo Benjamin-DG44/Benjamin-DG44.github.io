@@ -635,6 +635,14 @@ iframe {
     background-image: url(../images/ropeboundRescue.webp);
 }
 
+#card-img-4 {
+    background-image: url(../images/Shaders_Eau_Active.webp);
+}
+
+#card-img-5 {
+    background-image: url(../images/code_projet_analyse_logs.webp);
+}
+
 /* Légende d'une image */
 figcaption {
     font-size: 1rem;
