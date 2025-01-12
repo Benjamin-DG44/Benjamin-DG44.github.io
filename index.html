@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/manette.png"> <!-- Icon de ma page-->
+    <link rel="icon" href="../images/manette.png"> <!-- Icon de ma page-->
     <title>Portfolio Benjamin</title> <!-- Titre de ma page -->
     <!-- Importation des icons-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <!-- Feuilles CSS -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
@@ -18,7 +20,7 @@
         <nav>
             <!-- Menu Burger -->
             <div class="mobile-menu">
-                <span class="material-symbols-outlined" id="toggler" onclick="toggler()">menu</span> <!-- Ne pas retirer "menu" sinon le menu n'apparaît plus si la résolution est trop basse au début-->
+                <span class="material-symbols-outlined" id="toggler" onclick="toggler()"></span>
             </div>
             <!-- Menu d'origne visible quand la largeur est supérieure à 1300px-->
             <div class="menu">
@@ -185,7 +187,9 @@
             <div class="background-carousel">
                 <div class="background-slide" id="card-img-1"></div> <!-- 1er projet (visible à la fin)-->
                 <div class="background-slide" id="card-img-2"></div> <!-- 2ème projet -->
-                <div class="background-slide" id="card-img-3"></div> <!-- Projet le plus récent -->
+                <div class="background-slide" id="card-img-3"></div>
+                <div class="background-slide" id="card-img-4"></div>
+                <div class="background-slide" id="card-img-5"></div> <!-- Projet le plus récent -->
             </div>
             <!-- Carrousel des projets (cards) du plus récent au plus ancien -->
             <div class="carousel">
@@ -231,7 +235,6 @@
                         </p>
                     </article>
 
-                    <!-- Article le plus récent -->
                     <article class="card">
                         <!-- Vidéo du projet -->
                         <iframe 
@@ -251,6 +254,42 @@
                             l'on développe un jeu sur un thème imposé en temps limité (ici 48h). Nous étions deux pour 
                             concevoir ce jeu autour du thème “connexion” : une corde relie deux personnages contrôlés par 
                             un seul joueur. Le but est d'activer des leviers pour avancer dans les niveaux.
+                        </p>
+                    </article>
+
+                    <!-- 2ème Article le plus récent -->
+                    <article class="card">
+                        <!-- Image du projet -->
+                        <div class="card-img" id="card-img-4"></div>
+                        <!-- Légende du projet -->
+                        <figcaption><i>Veille technologique n°1 : <a href="https://drive.google.com/drive/folders/1e5wxXVvmIP_yGLcVWKCM0orPIqWWy_H2?usp=sharing">Les performances graphiques</a>, décembre 2024</i></figcaption>
+                        <!-- Titre de l'article -->
+                        <p class="card-titre">Les performances graphiques</p>
+                        <!-- Texte de l'article -->                        
+                        <p class=card-paragraphe>
+                            (Texte temporaire) C'est à partir de fin 2024, que j'ai eu pour mission de rédiger une veille technologique 
+                            sur le sujet de mon choix. De ce fait, j'ai voulu là produire sur quelque hcose qui me servira plus tard, tant 
+                            sur le plan loisir, que professionnel : "Les performances graphiques" dans les jeux vidéos. En cliquant sur le 
+                            lien présent dans la légende, vous aurez accès à mes documents qui ont contribué à la rédaction de cette veille 
+                            technologique.
+                        </p>
+                    </article>
+
+                    <!-- 1er Article le plus récent -->
+                    <article class="card">                        
+                        <!-- Image du projet -->
+                        <div class="card-img" id="card-img-5"></div>
+                        <!-- Légende du projet -->
+                        <figcaption><i>Projet n°1 (BTS SIO) : <a href="https://drive.google.com/drive/folders/16BmhDcy8EWS8xeYJontjuin2yLWbj-BW?usp=sharing">analyse de logs avec python et MySQL</a>, janvier 2025</i></figcaption>
+                        <!-- Titre de l'article -->
+                        <p class="card-titre">Analyse de logs</p>
+                        <!-- Texte de l'article -->                        
+                        <p class=card-paragraphe>
+                            (Texte temporaire) Le projet "Analyse de logs" est le premier a avoir été réalisé durant ma première 
+                            année en BTS SIO. Le but de ce projet est de trier les informations provenant d'un fichier CSV ou TXT. 
+                            Puis de transférer les informations voulu dans un fichier SQL, pour les ajouter à une base de donnée 
+                            existante. Ce projet a été très enrichissant, il m'a permis de travailler en équipe (à 2) et de développer 
+                            de nouvelles compétences en Python.
                         </p>
                     </article>
                 </div>
@@ -317,10 +356,10 @@
             <!-- Droits de licence en abriéviation -->
                 <img src="images/copyright.png" alt="Droits de licence" class="footer-logo">
                 <small><abbr title="Freepiks, pour les images paysages">Droits</abbr></small>
-             </a>
+            </a>
         </div>
-        <p>Page créée dans le cadre d'un TP en BTS SIO</p>
     </footer>
     <script src="javascript/script.js"></script>
+
 </body>
 </html>
