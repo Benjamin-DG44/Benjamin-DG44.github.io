@@ -423,14 +423,19 @@ section:target {
 }
 
 #flex-box-img-9 {
+    background-image: url(../images/GDScript.webp);
+}
+
+/* Image des logiciels */
+#flex-box-logi-img-1 {
     background-image: url(../images/NetBeans.webp);
 }
 
-#flex-box-img-10 {
+#flex-box-logi-img-2 {
     background-image: url(../images/Visual-Studio.webp);
 }
 
-#flex-box-img-11 {
+#flex-box-logi-img-3 {
     background-image: url(../images/Pycharm.webp);
 }
 
@@ -641,6 +646,10 @@ iframe {
 
 #card-img-5 {
     background-image: url(../images/code_projet_analyse_logs.webp);
+}
+
+#card-img-6 {
+    background-image: url(../images/code_Projet-Thali.webp);
 }
 
 /* Légende d'une image */
