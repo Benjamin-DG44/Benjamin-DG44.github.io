@@ -652,6 +652,19 @@ iframe {
     background-image: url(../images/code_projet-thali.webp);
 }
 
+#card-img-7 {
+    background-image: url();
+}
+
+#card-img-8 {
+    background-image: url();
+}
+
+#card-img-9 {
+    background-image: url();
+}
+
+
 /* Légende d'une image */
 figcaption {
     font-size: 1rem;
