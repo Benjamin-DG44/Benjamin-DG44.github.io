@@ -1,0 +1,12 @@
+.tag{
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: fit-content;
+    padding-inline: 8px;
+    padding-block: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: var(--border-radius-sm);
+
+}

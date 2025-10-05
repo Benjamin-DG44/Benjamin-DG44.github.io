@@ -1,0 +1,19 @@
+.grid {
+    display: grid;
+    justify-content: center;
+}
+
+/* Écran ≥ 900px : 2 colonnes de largeur flexible */
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1fr; /* le conteneur prend la largeur disponible*/
+    }
+}
+
+/* Écran < 900px : 1 colonne, min 21rem */
+@media (max-width: 899px) {
+    .grid {
+        grid-template-columns: minmax(21rem, 1fr);
+    }
+}

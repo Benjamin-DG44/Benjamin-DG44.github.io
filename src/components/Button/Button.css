@@ -1,0 +1,28 @@
+.btn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    border: none;
+    position: relative;
+    z-index: 5;
+}
+
+/* L’agencement interne des boutons */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bouton principal */
+.btn-primary {
+    background: var(--purple-500);
+    color: var(--primary-500);
+}
+
+/* Variante secondaire */
+.btn-secondary {
+    background-color: var(--primary-300);
+    color: var(--purple-500);
+}
+

@@ -1,0 +1,117 @@
+.contact {
+    background: var(--gradient-primary);
+    min-height: calc(100vh - 6rem);
+}
+
+.container {
+    margin-top: 1.2rem;
+    max-width: 600px;
+    /*background-color: red;*/
+}
+
+.mail-container {
+    background: var(--primary-500);
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-lg);
+    margin-inline: auto;
+    margin-top: 2rem;
+}
+
+.mail-link {
+    color: var(--purple-500);
+}
+
+.mail-link:hover {
+    text-decoration: underline;
+}
+
+.social-button{
+    --bg: #ffffff;
+    --fg: #000000;
+
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(0.8rem, 2vw, 1rem);
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+    transition: transform 220ms ease;
+    cursor: pointer;
+    margin-top: 2rem;
+    /*will-change: transform;*/
+}
+
+/* overlay qui remonte du bas => future couleur de fond */
+.social-button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--fg);     /* couleur qui va devenir le fond */
+    transform: translateY(100%);
+    transition: transform 440ms linear;
+    z-index: 1;
+    /*will-change: transform;*/
+}
+
+/* icône */
+.social-item{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--fg);
+    transition: color 220ms ease;
+    transform-style: preserve-3d;
+    /*will-change: color;*/
+}
+
+/* rotation pendant le hover  */
+@keyframes spin-x-times {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+}
+@keyframes spin-x-times-reverse {
+    from { transform: rotateY(360deg); }
+    to   { transform: rotateY(0deg); }
+}
+
+.social-button:hover .social-item{
+    animation: spin-x-times 0.35s linear;
+}
+
+/* Quand ce n'est plus hover*/
+.social-button:not(:hover) .social-item {
+    animation: spin-x-times-reverse 0.35s linear;
+}
+
+/* hover : on lance le wipe (overlay remonte) */
+.social-button:hover::before{
+    transform: translateY(0);
+}
+
+.social-button:hover {
+    transform: scale(1.2);
+}
+
+/* hover : on change la couleur de l'icône pour devenir l'ancien fond
+   on applique un petit delay pour synchroniser le swap avec le remplissage */
+.social-button:hover .social-item{
+    color: var(--bg); /* ancien fond devient couleur d'icône */
+    transition-delay: 220ms;
+}
+
+/* --- Définition des couleurs par bouton --- */
+.logo-gitlab { --bg: #F9F9F9; --fg: #ea8711; }
+.logo-linkedin{ --bg: #2f61e2; --fg: #F9F9F9; }
+.logo-github  { --bg: #272727; --fg: #F9F9F9; }

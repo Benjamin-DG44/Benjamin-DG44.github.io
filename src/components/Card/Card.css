@@ -1,0 +1,18 @@
+.card {
+    text-align: justify;
+    border-radius: var(--border-radius-xl);
+    padding: var(--font-size-lg);
+}
+
+.photo {
+    width: clamp(200px, 30vw, 325px);
+    height: clamp(200px, 30vw, 325px);
+    object-fit: scale-down;
+    border-radius: 100%;
+}
+
+.shadows {
+    box-shadow:
+            0 10px 15px -3px rgba(0, 0, 0, 0.1), /* première ombre */
+            0 4px 6px -4px rgba(0, 0, 0, 0.1); /* deuxième ombre */
+}

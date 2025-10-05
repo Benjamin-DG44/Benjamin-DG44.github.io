@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background: transparent;
+    color: var(--primary-500);
+    padding-block: 2.5rem;
+    border-top: 2px solid var(--primary-500);
+    margin-inline: 5vw;
+
+}
+
+.footer-text {
+    color: var(--primary-500);
+
+}

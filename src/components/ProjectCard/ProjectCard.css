@@ -1,0 +1,156 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    border-radius: var(--border-radius-xl);
+    height: 100%;
+    transition: all 0.3s ease; /* box-shadow et transform*/
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-image-shadows {
+    box-shadow:
+            0 10px 15px -3px rgba(0, 0, 0, 0.1), /* première ombre */
+            0 4px 6px -4px rgba(0, 0, 0, 0.1); /* deuxième ombre */
+}
+
+.project-image-shadows:hover {
+    box-shadow:
+            0 12px 17px -3px rgba(0, 0, 0, 0.2), /* première ombre */
+            0 6px 8px -4px rgba(0, 0, 0, 0.2); /* deuxième ombre */
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    min-height: fit-content;
+}
+
+/* Le conteneur masque l'image qui dépasse pendant le zoom */
+.project-image-container {
+    overflow: hidden;
+    border-top-left-radius: var(--border-radius-xl);
+    border-top-right-radius: var(--border-radius-xl);
+    height: clamp(10rem, 16vh, 16rem);
+    position: relative;
+
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: var(--border-radius-xl);
+    border-top-right-radius: var(--border-radius-xl);
+    transition: transform 0.2s ease;
+    transform-origin: center center;  /* centre du zoom */
+}
+
+/* Zoom au survol du conteneur */
+.project-image-container:hover .project-image {
+    transform: scale(1.1);
+}
+
+
+.project-resume {
+    color: var(--text-200);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* Nombre de lignes souhaitées */
+    overflow: hidden;
+
+}
+
+.project-features {
+    padding-inline: var(--font-size-lg);
+    text-align: left;
+}
+
+.project-feature {
+    color: var(--text-200);
+
+}
+.project-marker::marker {
+    color: var(--emerald-500);
+}
+
+.project-buttons-row {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    gap: 1rem;
+}
+
+.project-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-block: 0.35rem;
+    text-decoration: none;
+    flex: 1;
+    border-radius: var(--border-radius-sm);
+    border: 0.1px solid rgba(113, 113, 130, 0.5);
+
+}
+
+.project-button:hover {
+    background-color: #efefef;
+}
+
+.project-button-github {
+    background-color: var(--text-800);
+}
+
+.project-button-github:hover {
+    background-color: #303030;
+    border-color: #303030;
+}
+
+.project-button-gitlab {
+    background-color: var(--gitlab-color);
+    border-color: var(--gitlab-color);
+}
+
+.project-button-gitlab:hover {
+    background-color: #fbaa36;
+    border-color: #fbaa36;
+}
+
+.project-link {
+    color: var(--github-color);
+}
+
+.project-link-github, .project-link-gitlab {
+    color: var(--primary-500);
+}
+
+
+.project-icon {
+    width: clamp(20px, 2vw, 24px);
+    height: clamp(20px, 2vw, 24px);
+}
+
+.logo-github { color: var(--primary-500); }
+.logo-gitlab { color: var(--primary-500); }
+.logo-website { color: var(--text-800); }
+
+
+/*Aligne les boutons sur l'axe vertical */
+@media (max-width: 600px) {
+    .project-buttons-row {
+        flex-direction: column;
+        align-items: stretch;     /* Prend la largeur du parent */
+        gap: 0;
+    }
+
+    /* Pour que les boutons prennent toute la largeur disponible */
+    .project-button {
+        flex: none;
+        width: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+.fade-anim {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-anim.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Directions */
+.fade-up   { transform: translateY(40px); }   /* vient du bas */
+.fade-down { transform: translateY(-40px); }  /* vient du haut */
+.fade-left { transform: translateX(10px); }   /* vient de la droite */
+.fade-right{ transform: translateX(-10px); }  /* vient de la gauche */

@@ -1,0 +1,31 @@
+.home {
+    background: var(--gradient-primary);
+}
+
+.description {
+    max-width: 600px;
+    margin-inline: auto; /* centre verticalement*/
+}
+
+.margin-home {
+    margin-bottom: 1rem;
+}
+
+.chevron {
+    margin-top: 3rem;
+}
+
+.bounce {
+    animation: bounce 1s infinite; /* bounce 1s infinite */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}

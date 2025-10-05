@@ -1,0 +1,10 @@
+.underline-container {
+    display: flex;
+    justify-content: center;
+}
+
+.underline {
+    background: var(--gradient-text);
+    width: clamp(4rem, 8vw, 6rem);
+    height: 0.3rem;
+}
