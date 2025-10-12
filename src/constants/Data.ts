@@ -36,9 +36,9 @@ export const projects: Project[] = [
             "Son but ? Faire perdre patience et temps aux joueurs. PS : Le site est entièrement fonctionnel " +
             "(et possède une fin) !",
         features: [
-            "QCM",
-            "Trompe l'utilisateur",
-            "test"
+            "Interaction avec l’utilisateur",
+            "Mécanismes de “frustration/challenge”",
+            "Progression et fin du jeu"
         ],
         tags: ["Javascript", "HTML", "CSS"],
         url_depot: "https://github.com/Benjamin-DG44/Projet_HMMMM",
