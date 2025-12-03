@@ -1,4 +1,9 @@
 import {getImageProjectUrl} from "../utils/getUrls";
+import {
+    G_DRIVE_PROJET_INTRANET, G_DRIVE_PROJET_JANVIER, G_DRIVE_PROJET_R3ST0_FR,
+    G_DRIVE_PROJET_R3STO_ANDROID, G_DRIVE_PROJET_THALI, G_DRIVE_PROJET_VEILLE_1, G_DRIVE_PROJET_VEILLE_2,
+    G_DRIVE_STAGE_1
+} from "./URL";
 
 export const EMAIL: string = "b.delaunay.guitton@gmail.com"
 
@@ -91,7 +96,8 @@ export const projects: Project[] = [
             "Insertion des données dans une BDD MariaBD"
         ],
         tags: ["Python", "MySQL"],
-        url_depot: "https://github.com/Benjamin-DG44/Projet_Python_Analyse_Logs"
+        url_depot: "https://github.com/Benjamin-DG44/Projet_Python_Analyse_Logs",
+        url_web: G_DRIVE_PROJET_JANVIER
     },
     {
         idProject: 5,
@@ -107,8 +113,9 @@ export const projects: Project[] = [
             "Manipulation d'interfaces graphiques (Swing)",
             "Liaison des données avec une BDD"
         ],
-        tags: ["Java", "MySQL" , "Swing"],
-        url_depot: "https://github.com/Benjamin-DG44/Projet_Java_Thali"
+        tags: ["Java", "MySQL", "Swing"],
+        url_depot: "https://github.com/Benjamin-DG44/Projet_Java_Thali",
+        url_web: G_DRIVE_PROJET_THALI
     },
     {
         idProject: 6,
@@ -125,11 +132,24 @@ export const projects: Project[] = [
             "Définition et gestion des rôles utilisateurs avec droits spécifiques",
         ],
         tags: ["PHP", "HTML", "CSS", "MySQL", "Python"],
-        url_depot: "https://gitlab.com/AnaisPrt/projet-intranet"
-    },
-    {
+        url_depot: "https://gitlab.com/AnaisPrt/projet-intranet",
+        url_web: G_DRIVE_PROJET_INTRANET
+    }, {
         idProject: 7,
         img: getImageProjectUrl("project-7-main.webp"),
+        name: "Veille technologique n°1 : Passwordless",
+        resume: "Les mots de passe sont-ils devenus obsolètes à l’ère du passwordless ? C'est la question à la quelle cette veille technologique va répondre." +
+            "En conclusion, les mots de passes ne sont pas encore devenus obsolètes. Le coût économique pour mettre en place les nouveaux moyens d'authentification est beaucoup trop élevé pour les entreprises puisque cela impliquerait de devoir changer toute leur infrastructure concernant les authentifications.",
+        features: [
+            "Clés physiques (FIDO2)",
+            "Scanners biométriques (empreintes digitales, rétiniens)",
+        ],
+        tags: ["Feedly", "Google Actualités"],
+        url_web: G_DRIVE_PROJET_VEILLE_1
+    },
+    {
+        idProject: 8,
+        img: getImageProjectUrl("project-8-main.webp"),
         name: "Stage : Développement d'une app",
         resume: "Durant mon stage chez SCR Informatiques, j'ai eu pour mission principale le développement d'une application\n" +
             "mobile, nommée AVI. Cette application va servir aux formateurs et aux commerciaux de l'entreprise pour réserver \n" +
@@ -142,23 +162,66 @@ export const projects: Project[] = [
             "Programmer les formulaires de création et la navigation entre les pages",
         ],
         tags: ["React", "React Native", "CSS", "Prisma", "Express JS", "PostgreSQL"],
+        url_web: G_DRIVE_STAGE_1
+    },
+    {
+        idProject: 9,
+        img: getImageProjectUrl("project-9-main.webp"),
+        name: "Site web : R3st0.fr",
+        resume: "Le projet R3st0.fr vise à créer un site web de critiques de restaurants, permettant aux utilisateurs de " +
+            "consulter et laisser des avis. Cela leur facilite le choix du restaurant dans lequel ils vont à aller manger.",
+        features: [
+            "Critique des restaurants (étoiles)",
+            "Compte utilisateurs",
+            "Recherches multi-critères"
+        ],
+        tags: ["HTML", "CSS", "Javascript", "PHP", "MySQL"],
+        url_depot: "https://gitlab.com/Jtaille/p1_g3_siteresto2025",
+        url_web: G_DRIVE_PROJET_R3ST0_FR
+    },
+    {
+        idProject: 10,
+        img: getImageProjectUrl("project-10-main.webp"),
+        name: "Veille technologique n°2 : Vibe coding",
+        resume: "Problématique : Le vibe coding va-t-il redéfinir le métier de développeur et la façon de produire du logiciel ?\n" +
+            "Le vibe coding accélère la création de logiciels et permet aux non-développeurs de produire des applications, " +
+            "mais il ne remplace pas l’expertise humaine : il transforme les méthodes de production tout en exigeant supervision " +
+            "et vérification pour garantir la maintenabilité, la sécurité et la conformité légale.",
+        features: [
+            "Multi-Agent collaboration",
+            "Génération de code par prompt en langage naturel",
+            "Simulation et test automatisés"
+        ],
+        tags: ["Feedly", "Google Actualités", "TLDR", "Daily.dev"],
+        url_web: G_DRIVE_PROJET_VEILLE_2
+    },
+    {
+        idProject: 11,
+        img: getImageProjectUrl("project-11-main.webp"),
+        name: "Application native android : R3st0",
+        resume: "Application Android permettant la consultation et la réservation de table dans des restaurants via une API REST. " +
+            "La base de données utilisée est identique au projet 'R3st0.fr'",
+        features: [
+            "Mise en place d'une API REST",
+            "Réservations de restaurants",
+            "Consultation de la fiche des restaurants"
+        ],
+        tags: ["Android", "Java", "PHP"],
+        url_depot: "https://gitlab.com/AnaisPrt/p2_g7_2slam_ap_projet_android",
+        url_web: G_DRIVE_PROJET_R3STO_ANDROID
     },
 ];
 // TODO : intégrer mes veilles technologiques sur la future seconde page de mon site
 // {
-//         idProject: 0,
-//         img: getImageUrl("autoformation-1-main.webp"),
-//         name: "Gestion des performances",
-//         resume: "C'est à partir de fin 2024, que j'ai eu pour mission de rédiger une veille technologique \n" +
-//             "sur le sujet de mon choix. De ce fait, j'ai voulu là produire sur quelque chose qui me servira plus tard, tant \n" +
-//             "sur le plan loisir, que professionnel : \"Les performances graphiques\" dans les jeux vidéos. En cliquant sur le \n" +
-//             "lien présent dans la légende, vous aurez accès à mes documents qui ont contribué à la rédaction de cette veille \n" +
-//             "technologique.",
-//         features: [
-//             "",
-//             "",
-//             ""
-//         ],
-//         tags: ["", ""],
-//         url: ""
+// idProject: 0,
+//     img: getImageProjectUrl(""),
+//     name: "",
+//     resume: "",
+//     features: [
+//     "",
+//     "",
+//     ""
+// ],
+//     tags: ["", ""],
+//     url_web: ""
 //     },

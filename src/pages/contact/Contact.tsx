@@ -24,8 +24,8 @@ function Contact() {
             <div className="container all-center">
                 <FadeAnimation delay={150}>
                     <p className="text-xl">
-                        Actuellement en <strong className="text-gradient-2">recherche active d’un stage du 5 janvier
-                        au 12 février 2026</strong> (6 semaines), en développement mobile, web, ou logiciel.
+                        Actuellement à la <strong className="text-gradient-2">recherche d’une alternance pour mon année
+                        d'étude 2026/2027</strong> en développement mobile ou logiciel.
                     </p>
                 </FadeAnimation>
                 <FadeAnimation delay={200}>

@@ -3,7 +3,7 @@ import './ProjectCard.css';
 import {projects} from "../../constants/Data";
 import TagList from "../TagsList/TagList";
 import {HugeiconsIcon} from "@hugeicons/react";
-import {GithubIcon, GitlabIcon, Globe02Icon} from "@hugeicons/core-free-icons/index";
+import {GithubIcon, GitlabIcon, Globe02Icon, GoogleDriveFreeIcons} from "@hugeicons/core-free-icons/index";
 import {getImageUrl} from "../../utils/getUrls";
 import FadeAnimation from "../FadeAnimation/FadeAnimation";
 
@@ -64,6 +64,13 @@ function ButtonWeb({web_url}: { web_url?: string }) {
             <a className="project-button mt-1" href={web_url} target="_blank" rel="noreferrer">
                 <HugeiconsIcon icon={Globe02Icon} strokeWidth={1.3} className="project-icon logo-website"/>
                 <p className="project-link text-base-800">Tester le projet</p>
+            </a>
+        );
+    } else if (web_url.includes("drive.google.com")) {
+        return (
+            <a className="project-button mt-1" href={web_url} target="_blank" rel="noreferrer">
+                <HugeiconsIcon icon={GoogleDriveFreeIcons} strokeWidth={1.3} className="project-icon logo-website"/>
+                <p className="project-link text-base-800">Voir le drive</p>
             </a>
         );
     }
