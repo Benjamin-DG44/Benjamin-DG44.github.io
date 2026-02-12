@@ -53,7 +53,7 @@ function About() {
                                 <TagList data_list={personnal_skills}/>
                             </FadeAnimation>
                             <FadeAnimation direction="right" delay={650}>
-                                <SubTitle text="Éditeurs de code" mTop="0.6" mBottom="0.4"/>
+                                <SubTitle text="Logiciels" mTop="0.6" mBottom="0.4"/>
                             </FadeAnimation>
                             <FadeAnimation direction="right" delay={700}>
                                 <TagList data_list={softwares}/>

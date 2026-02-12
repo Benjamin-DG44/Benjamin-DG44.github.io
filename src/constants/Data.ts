@@ -12,10 +12,10 @@ export const soft_skills: string[] =
     ["Travail d'équipe", "Autonomie", "Communication", "Curiosité", "Esprit critique"];
 
 export const personnal_skills: string[] =
-    ["HTML", "CSS", "Javascript", "PHP", "Java", "Python", "MySQL", "PostgreSQL", "Express JS", "Prisma", "React", "React Native"];
+    ["HTML", "CSS", "Javascript", "TypeScript", "PHP", "Symfony", "Java", "Python", "SQL", "PostgreSQL", "Express JS", "Fastify", "Prisma", "React", "React Native", "Zod", "Git"];
 
 export const softwares: string[] =
-    ["VS Code", "NetBeans", "Pycharm", "Webstorm", "IntelliJ IDEA", "Android Studio"]
+    ["VS Code", "NetBeans", "Pycharm", "Webstorm", "IntelliJ IDEA", "Android Studio", "Looping", "Postman"]
 
 
 // Projets réalisés
@@ -33,7 +33,7 @@ export interface Project {
 export const projects: Project[] = [
     {
         idProject: 1,
-        img: getImageProjectUrl("project-1-main.webp"),
+        img: getImageProjectUrl("project-hmm-main.webp"),
         name: "HMMMM",
         resume:
             "Pour notre dernier projet de Terminale en NSI, notre professeur nous a demandé de créer un projet en " +
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     },
     {
         idProject: 2,
-        img: getImageProjectUrl("project-2-main.webp"),
+        img: getImageProjectUrl("project-unity2d-main.webp"),
         name: "Jeu vidéo en 2D",
         resume: "Pour commencer à acquérir des connaissances en développement de jeux vidéo, j'ai suivi un \n" +
             "tutoriel d'un youtubeur français pour créer un jeu 2D. J'ai apprécié cette expérience, bien \n" +
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     },
     {
         idProject: 3,
-        img: getImageProjectUrl("project-3-main.webp"),
+        img: getImageProjectUrl("project-ropebound_rescue-main.webp"),
         name: "Ropebound Rescue",
         resume: "Ropebound Rescue est un prototype de jeu créé lors de ma première game jam, un événement où \n" +
             "l'on développe un jeu sur un thème imposé en temps limité (ici 48h). Nous étions deux pour \n" +
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     },
     {
         idProject: 4,
-        img: getImageProjectUrl("project-4-main.webp"),
+        img: getImageProjectUrl("project-traitements_python-main.webp"),
         name: "Projet Python : Analyse de logs",
         resume: "Le projet \"Analyse de logs\" est le premier a avoir été réalisé durant ma première \n" +
             "année en BTS SIO. Le but de ce projet est de trier les informations provenant d'un fichier CSV ou TXT. \n" +
@@ -95,17 +95,17 @@ export const projects: Project[] = [
             "Insertion des données au format CSV",
             "Insertion des données dans une BDD MariaBD"
         ],
-        tags: ["Python", "MySQL"],
+        tags: ["Python", "SQL"],
         url_depot: "https://github.com/Benjamin-DG44/Projet_Python_Analyse_Logs",
         url_web: G_DRIVE_PROJET_JANVIER
     },
     {
         idProject: 5,
-        img: getImageProjectUrl("project-5-main.webp"),
+        img: getImageProjectUrl("project-java_crud-main.webp"),
         name: "Projet Java : Opérations CRUD : ",
         resume: "Le projet \"Thali\" consiste en la mise en place de l'opération CRUD (Create, Read, Update, Delete) \n" +
             "sur un logiciel codé en JAVA pour une entreprise d'agence de voyage. En parallèle, les informations \n" +
-            "que l'utilisateur rentrait, modifiait une base de données MySQL. Ce projet m'a permis de nouveau de \n" +
+            "que l'utilisateur rentrait, modifiait une base de données SQL. Ce projet m'a permis de nouveau de \n" +
             "travailler en binôme. Il m'a aussi appris à travailler sur un projet prémonté (en partie) et donc de \n" +
             "savoir m'adapter.",
         features: [
@@ -113,13 +113,13 @@ export const projects: Project[] = [
             "Manipulation d'interfaces graphiques (Swing)",
             "Liaison des données avec une BDD"
         ],
-        tags: ["Java", "MySQL", "Swing"],
+        tags: ["Java", "SQL", "Swing"],
         url_depot: "https://github.com/Benjamin-DG44/Projet_Java_Thali",
         url_web: G_DRIVE_PROJET_THALI
     },
     {
         idProject: 6,
-        img: getImageProjectUrl("project-6-main.webp"),
+        img: getImageProjectUrl("project-intranet-main.webp"),
         name: "Projet PHP : Intranet",
         resume: "Le projet \"Intranet\" consiste en la mise en place d'outils permettant aux employés d'une organisation \n" +
             "fictive nommée \"Corpany\". Nous étions 3 à travailler sur ce projet, durant lequel nous devions remplir\n" +
@@ -131,12 +131,12 @@ export const projects: Project[] = [
             "Création d'une messagerie et d'un espace de stockage personnel",
             "Définition et gestion des rôles utilisateurs avec droits spécifiques",
         ],
-        tags: ["PHP", "HTML", "CSS", "MySQL", "Python"],
+        tags: ["PHP", "HTML", "CSS", "SQL", "Python"],
         url_depot: "https://gitlab.com/AnaisPrt/projet-intranet",
         url_web: G_DRIVE_PROJET_INTRANET
     }, {
         idProject: 7,
-        img: getImageProjectUrl("project-7-main.webp"),
+        img: getImageProjectUrl("project-veille_passwordless-main.webp"),
         name: "Veille technologique n°1 : Passwordless",
         resume: "Les mots de passe sont-ils devenus obsolètes à l’ère du passwordless ? C'est la question à la quelle cette veille technologique va répondre." +
             "En conclusion, les mots de passes ne sont pas encore devenus obsolètes. Le coût économique pour mettre en place les nouveaux moyens d'authentification est beaucoup trop élevé pour les entreprises puisque cela impliquerait de devoir changer toute leur infrastructure concernant les authentifications.",
@@ -149,7 +149,7 @@ export const projects: Project[] = [
     },
     {
         idProject: 8,
-        img: getImageProjectUrl("project-8-main.webp"),
+        img: getImageProjectUrl("project-scr-main.webp"),
         name: "Stage : Développement d'une app",
         resume: "Durant mon stage chez SCR Informatiques, j'ai eu pour mission principale le développement d'une application\n" +
             "mobile, nommée AVI. Cette application va servir aux formateurs et aux commerciaux de l'entreprise pour réserver \n" +
@@ -161,12 +161,12 @@ export const projects: Project[] = [
             "Mise en place d'une API REST et d'une BDD",
             "Programmer les formulaires de création et la navigation entre les pages",
         ],
-        tags: ["React", "React Native", "CSS", "Prisma", "Express JS", "PostgreSQL"],
+        tags: ["React", "React Native", "CSS", "Prisma", "Express JS", "Javascript", "TypeScript", "PostgreSQL"],
         url_web: G_DRIVE_STAGE_1
     },
     {
         idProject: 9,
-        img: getImageProjectUrl("project-9-main.webp"),
+        img: getImageProjectUrl("project-r3sto_web-main.webp"),
         name: "Site web : R3st0.fr",
         resume: "Le projet R3st0.fr vise à créer un site web de critiques de restaurants, permettant aux utilisateurs de " +
             "consulter et laisser des avis. Cela leur facilite le choix du restaurant dans lequel ils vont à aller manger.",
@@ -175,13 +175,13 @@ export const projects: Project[] = [
             "Compte utilisateurs",
             "Recherches multi-critères"
         ],
-        tags: ["HTML", "CSS", "Javascript", "PHP", "MySQL"],
+        tags: ["HTML", "CSS", "Javascript", "PHP", "SQL"],
         url_depot: "https://gitlab.com/Jtaille/p1_g3_siteresto2025",
         url_web: G_DRIVE_PROJET_R3ST0_FR
     },
     {
         idProject: 10,
-        img: getImageProjectUrl("project-10-main.webp"),
+        img: getImageProjectUrl("project-veille_vibe_coding-main.webp"),
         name: "Veille technologique n°2 : Vibe coding",
         resume: "Problématique : Le vibe coding va-t-il redéfinir le métier de développeur et la façon de produire du logiciel ?\n" +
             "Le vibe coding accélère la création de logiciels et permet aux non-développeurs de produire des applications, " +
@@ -197,10 +197,25 @@ export const projects: Project[] = [
     },
     {
         idProject: 11,
-        img: getImageProjectUrl("project-11-main.webp"),
+        img: getImageProjectUrl("project-exercices_java-main.webp"),
+        name: "Autoformation : JavaFX et persistence",
+        resume: "J’ai réalisé cette application desktop en Java à partir d’un tutoriel de 2015, en utilisant JavaFX " +
+            "et la persistance des données, et je souhaite désormais y apporter mes propres modifications.",
+        features: [
+            "Découverte de JavaFX et persistence des données",
+            "Exercices évolutifs (en cours de développement)",
+            "Déploiement en JAR"
+        ],
+        tags: ["Java", "JavaFX", "Maven"],
+        url_depot: "https://github.com/Benjamin-DG44/Entrainement_Java",
+        url_web: "https://code.makery.ch/fr/library/javafx-tutorial/"
+    },
+    {
+        idProject: 12,
+        img: getImageProjectUrl("project-r3sto_android-main.webp"),
         name: "Application native android : R3st0",
-        resume: "Application Android permettant la consultation et la réservation de table dans des restaurants via une API REST. " +
-            "La base de données utilisée est identique au projet 'R3st0.fr'",
+        resume: "Développement d'une application Android permettant la consultation et la réservation de table dans des " +
+            "restaurants via une API REST. La base de données utilisée est identique au projet 'R3st0.fr'",
         features: [
             "Mise en place d'une API REST",
             "Réservations de restaurants",
@@ -209,6 +224,35 @@ export const projects: Project[] = [
         tags: ["Android", "Java", "PHP"],
         url_depot: "https://gitlab.com/AnaisPrt/p2_g7_2slam_ap_projet_android",
         url_web: G_DRIVE_PROJET_R3STO_ANDROID
+    },
+    {
+        idProject: 13,
+        img: getImageProjectUrl("project-exercices_java-main.webp"),
+        name: "Autoformation : Java",
+        resume: "Projet personnel d’autoformation en Java à travers une série d’exercices progressifs. " +
+            "L’objectif est d’approfondir les bases du langage tout en explorant des concepts plus avancés " +
+            "tels que la structuration d’un projet, la manipulation de données et l’utilisation de bibliothèques " +
+            "standards.",
+        features: [
+            "Lecture / Écriture de fichiers",
+            "Exercices évolutifs (en cours de développement)"
+        ],
+        tags: ["Java"],
+        url_depot: "https://github.com/Benjamin-DG44/Entrainement_Java",
+    },
+    {
+        idProject: 14,
+        img: getImageProjectUrl("project-scr-main.webp"),
+        name: "Stage : Développement d'une app (suite)",
+        resume: "Durant ce second stage chez SCR Informatiques, j'ai eu l'opportunité de poursuivre le projet que j'avais " +
+            "débuté l'année dernière en binôme. L'objectif durant ces 6 semaines de stage étaient de refactoriser " +
+            "l'API, de rendre l'application mobile dynamique et de sortir un APK.",
+        features: [
+            "Refactorisation de l'API, migration de l'ORM Prisma (v6 -> v7)",
+            "Refonte et développement de formulaires et d'écrans",
+            "Déploiement sous la forme d'un APK",
+        ],
+        tags: ["React Native", "CSS", "Prisma", "Fastify", "TypeScript", "Zod", "PostgreSQL"],
     },
 ];
 // TODO : intégrer mes veilles technologiques sur la future seconde page de mon site

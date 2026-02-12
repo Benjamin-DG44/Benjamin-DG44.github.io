@@ -59,13 +59,6 @@ function ButtonWeb({web_url}: { web_url?: string }) {
                 <p className="project-link text-base-800">Tester le projet</p>
             </a>
         );
-    } else if (web_url.includes("github.io")) {
-        return (
-            <a className="project-button mt-1" href={web_url} target="_blank" rel="noreferrer">
-                <HugeiconsIcon icon={Globe02Icon} strokeWidth={1.3} className="project-icon logo-website"/>
-                <p className="project-link text-base-800">Tester le projet</p>
-            </a>
-        );
     } else if (web_url.includes("drive.google.com")) {
         return (
             <a className="project-button mt-1" href={web_url} target="_blank" rel="noreferrer">
@@ -73,8 +66,14 @@ function ButtonWeb({web_url}: { web_url?: string }) {
                 <p className="project-link text-base-800">Voir le drive</p>
             </a>
         );
+    } else {
+        return (
+            <a className="project-button mt-1" href={web_url} target="_blank" rel="noreferrer">
+                <HugeiconsIcon icon={Globe02Icon} strokeWidth={1.3} className="project-icon logo-website"/>
+                <p className="project-link text-base-800">{web_url.includes("github.io") ? "Tester le projet" : "Référence"}</p>
+            </a>
+        );
     }
-    return null;
 }
 
 

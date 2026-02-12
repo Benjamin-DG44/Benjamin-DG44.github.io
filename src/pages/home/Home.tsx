@@ -29,16 +29,16 @@ function Home() {
                             <strong className="text-gradient-2">
                                 <i>recherche d'une alternance pour mon année d'étude 2026/2027 en développement logiciel
                                     ou mobile</i>
-                            </strong>. Passionné par la programmation. J’entame ma{" "}
+                            </strong>. Étudiant en{" "}
                             <strong className="text-gradient-2">
-                                <i>seconde année en BTS SIO option SLAM</i>
+                                <i>seconde année de BTS SIO option SLAM</i>
                             </strong>{" "}
-                            à La Joliverie à Nantes. Ayant un attrait pour la{" "}
+                            à La Joliverie à Nantes je suis passionné par la{" "}
                             <strong className="text-gradient-2">
-                                <i>programmation orientée objet</i>
+                                <i>programmation orientée objet</i>{" "}
                             </strong>
-                            , je souhaite me spécialiser dans le développement d’applications,
-                            qu’elles soient mobiles ou logicielles (desktop).
+                            et souhaite me spécialiser dans le développement d’applications
+                            desktop ou mobile.
                         </p>
                     </div>
                 </FadeAnimation>
@@ -46,8 +46,11 @@ function Home() {
                 <FadeAnimation direction="down" delay={200}>
                     <div className="button-group">
                         {/* TODO : à modifier une fois le passage à l'oral fini*/}
-                        <Button variant="primary" onClick={() => window.open(G_DRIVE_RECAP)} animation="btn-slide"> {/* to={PROJECTS_URL} */}
-                            <p className="text-lg-bold">Voir tableau</p> {/* Voir mon travail */}
+                        <Button variant="primary"
+                                animation="btn-slide"
+                                to={PROJECTS_URL}
+                        > {/*  */}
+                            <p className="text-lg-bold">Voir mon travail</p>
                         </Button>
                         <Button variant="secondary" onClick={() => window.open(PDF_CV)}>
                             <p className="text-lg-bold">Télécharger CV</p>
