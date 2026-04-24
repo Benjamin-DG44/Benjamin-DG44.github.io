@@ -31,7 +31,8 @@ export const G_DRIVE_PROJET_INTRANET = "https://drive.google.com/drive/folders/1
 export const G_DRIVE_STAGE_1 = "https://drive.google.com/drive/folders/1AIgq6ZjFxXoNufszSep6IAy4CNxOOSkE?usp=drive_link";
 // BTS SIO : 2SLAM
 export const G_DRIVE_PROJET_R3ST0_FR = "https://drive.google.com/drive/folders/1LwhtNgl1molnetbVVRoPWqIIdl-QWAC2?usp=drive_link";
-export const G_DRIVE_PROJET_R3STO_ANDROID = "https://drive.google.com/drive/folders/1UlNwy2VEvDGDxgJzFiuIAG4WdItwoZK8?usp=sharing"
+export const G_DRIVE_PROJET_R3STO_ANDROID = "https://drive.google.com/drive/folders/1UlNwy2VEvDGDxgJzFiuIAG4WdItwoZK8?usp=drive_link"
+export const G_DRIVE_PROJET_R3STO_DESKTOP = "https://drive.google.com/drive/folders/1T6Hi10kJZdLsqfPrzGKnYbjsMvJh0gOe?usp=drive_link"
 
 
 // TODO : Convertir toutes les images au format WEBP

@@ -1,7 +1,8 @@
 import {getImageProjectUrl} from "../utils/getUrls";
 import {
     G_DRIVE_PROJET_INTRANET, G_DRIVE_PROJET_JANVIER, G_DRIVE_PROJET_R3ST0_FR,
-    G_DRIVE_PROJET_R3STO_ANDROID, G_DRIVE_PROJET_THALI, G_DRIVE_PROJET_VEILLE_1, G_DRIVE_PROJET_VEILLE_2,
+    G_DRIVE_PROJET_R3STO_ANDROID,
+    G_DRIVE_PROJET_R3STO_DESKTOP, G_DRIVE_PROJET_THALI, G_DRIVE_PROJET_VEILLE_1, G_DRIVE_PROJET_VEILLE_2,
     G_DRIVE_STAGE_1
 } from "./URL";
 
@@ -138,8 +139,11 @@ export const projects: Project[] = [
         idProject: 7,
         img: getImageProjectUrl("project-veille_passwordless-main.webp"),
         name: "Veille technologique n°1 : Passwordless",
-        resume: "Les mots de passe sont-ils devenus obsolètes à l’ère du passwordless ? C'est la question à la quelle cette veille technologique va répondre." +
-            "En conclusion, les mots de passes ne sont pas encore devenus obsolètes. Le coût économique pour mettre en place les nouveaux moyens d'authentification est beaucoup trop élevé pour les entreprises puisque cela impliquerait de devoir changer toute leur infrastructure concernant les authentifications.",
+        resume: "Les mots de passe sont-ils devenus obsolètes à l’ère du passwordless ? C'est la question à la quelle " +
+            "cette veille technologique va répondre. En conclusion, les mots de passe ne sont pas encore devenus " +
+            "obsolètes. Le coût économique pour mettre en place les nouveaux moyens d'authentification est beaucoup " +
+            "trop élevé pour les entreprises puisque cela impliquerait de devoir changer toute leur infrastructure " +
+            "concernant les authentifications.",
         features: [
             "Clés physiques (FIDO2)",
             "Scanners biométriques (empreintes digitales, rétiniens)",
@@ -166,7 +170,7 @@ export const projects: Project[] = [
     },
     {
         idProject: 9,
-        img: getImageProjectUrl("project-r3sto_web-main.webp"),
+        img: getImageProjectUrl("project-r3st0_web-main.webp"),
         name: "Site web : R3st0.fr",
         resume: "Le projet R3st0.fr vise à créer un site web de critiques de restaurants, permettant aux utilisateurs de " +
             "consulter et laisser des avis. Cela leur facilite le choix du restaurant dans lequel ils vont à aller manger.",
@@ -212,10 +216,10 @@ export const projects: Project[] = [
     },
     {
         idProject: 12,
-        img: getImageProjectUrl("project-r3sto_android-main.webp"),
+        img: getImageProjectUrl("project-r3st0_android-main.webp"),
         name: "Application native android : R3st0",
         resume: "Développement d'une application Android permettant la consultation et la réservation de table dans des " +
-            "restaurants via une API REST. La base de données utilisée est identique au projet 'R3st0.fr'",
+            "restaurants via une API REST. La base de données utilisée est inspirée du \"R3st0.fr\"",
         features: [
             "Mise en place d'une API REST",
             "Réservations de restaurants",
@@ -254,8 +258,25 @@ export const projects: Project[] = [
         ],
         tags: ["React Native", "CSS", "Prisma", "Fastify", "TypeScript", "Zod", "PostgreSQL"],
     },
+    {
+        idProject: 15,
+        img: getImageProjectUrl("project-r3st0_desktop-main.png"),
+        name: "Application de modération",
+        resume: "Application de bureau codée en Java, structurée selon une architecture MVC, en équipe de 3. Le rôle de cette " +
+            "application est de gérer les avis des restaurants provenant du site web \"R3s0.fr\". Cette application " +
+            "possède deux types d'utilisateurs : les modérateurs et les responsables. Un responsable possède plus de " +
+            "droits qu'un modérateur.",
+        features: [
+            "Connexion à l'application restreinte (modérateurs et responsables)",
+            "Principe du moindre privilèges",
+            "Gestion des commentaires",
+        ],
+        tags: ["Java", "Swing"],
+        url_depot: "https://gitlab.com/AnaisPrt/p3_g1_projet_moderation",
+        url_web: G_DRIVE_PROJET_R3STO_DESKTOP
+    },
 ];
-// TODO : intégrer mes veilles technologiques sur la future seconde page de mon site
+// TODO : intégrer la future seconde page de mon site
 // {
 // idProject: 0,
 //     img: getImageProjectUrl(""),
