@@ -12,7 +12,7 @@ function Home() {
             <div className="all-center">
                 <FadeAnimation direction="down">
                     <p className="text-3xl text-gradient margin-home">
-                        Benjamin <br/> DELAUNAY-GUITTON
+                        Benjamin<br/>DELAUNAY-GUITTON
                     </p>
                 </FadeAnimation>
 
