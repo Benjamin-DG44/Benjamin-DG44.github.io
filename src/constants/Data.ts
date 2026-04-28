@@ -13,7 +13,8 @@ export const soft_skills: string[] =
     ["Travail d'équipe", "Autonomie", "Communication", "Curiosité", "Esprit critique"];
 
 export const personnal_skills: string[] =
-    ["HTML", "CSS", "Javascript", "TypeScript", "PHP", "Symfony", "Java", "Python", "SQL", "PostgreSQL", "Express JS", "Fastify", "Prisma", "React", "React Native", "Zod", "Git"];
+    ["HTML", "CSS", "Javascript", "TypeScript", "PHP", "Symfony", "Doctrine", "Java", "Swing", "JavaFX", "JUnit",
+        "Python", "SQL", "PostgreSQL", "Express JS", "Fastify", "Prisma", "React", "React Native", "Zod", "Git"];
 
 export const softwares: string[] =
     ["VS Code", "NetBeans", "Pycharm", "Webstorm", "IntelliJ IDEA", "Android Studio", "Looping", "Postman"]
