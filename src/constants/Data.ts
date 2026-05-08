@@ -1,42 +1,149 @@
 import {getImageProjectUrl} from "../utils/getUrls";
 import {
-    G_DRIVE_PROJET_INTRANET, G_DRIVE_PROJET_JANVIER, G_DRIVE_PROJET_R3ST0_FR,
+    G_DRIVE_PROJET_INTRANET,
+    G_DRIVE_PROJET_JANVIER,
+    G_DRIVE_PROJET_R3ST0_FR,
     G_DRIVE_PROJET_R3STO_ANDROID,
-    G_DRIVE_PROJET_R3STO_DESKTOP, G_DRIVE_PROJET_THALI, G_DRIVE_PROJET_VEILLE_1, G_DRIVE_PROJET_VEILLE_2,
-    G_DRIVE_STAGE_1
+    G_DRIVE_PROJET_R3STO_DESKTOP,
+    G_DRIVE_PROJET_THALI,
+    G_DRIVE_PROJET_VEILLE_1,
+    G_DRIVE_PROJET_VEILLE_2,
+    G_DRIVE_STAGE_1,
 } from "./URL";
 
-export const EMAIL: string = "b.delaunay.guitton@gmail.com"
+export const EMAIL = "b.delaunay.guitton@gmail.com";
 
-// A propos de moi
-export const soft_skills: string[] =
-    ["Travail d'équipe", "Autonomie", "Communication", "Curiosité", "Esprit critique"];
+/* =========================
+   COMPÉTENCES
+========================= */
 
-export const personnal_skills: string[] =
-    ["HTML", "CSS", "Javascript", "TypeScript", "PHP", "Symfony", "Doctrine", "Java", "Swing", "JavaFX", "JUnit",
-        "Python", "SQL", "PostgreSQL", "Express JS", "Fastify", "Prisma", "React", "React Native", "Zod", "Git"];
+export const soft_skills = [
+    "Travail d'équipe",
+    "Autonomie",
+    "Communication",
+    "Curiosité",
+    "Esprit critique",
+];
 
-export const softwares: string[] =
-    ["VS Code", "NetBeans", "Pycharm", "Webstorm", "IntelliJ IDEA", "Android Studio", "Looping", "Postman"]
+export const personnal_skills = [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "TypeScript",
+    "PHP",
+    "Symfony",
+    "Doctrine",
+    "Java",
+    "Swing",
+    "JavaFX",
+    "JUnit",
+    "Python",
+    "SQL",
+    "PostgreSQL",
+    "Express JS",
+    "Fastify",
+    "Prisma",
+    "React",
+    "React Native",
+    "Zod",
+    "Git",
+];
 
+export const softwares = [
+    "VS Code",
+    "NetBeans",
+    "Pycharm",
+    "Webstorm",
+    "IntelliJ IDEA",
+    "Android Studio",
+    "Looping",
+    "Postman",
+];
 
-// Projets réalisés
+/* =========================
+   TYPES
+========================= */
+
+export interface ProjectLink {
+    label: string;
+    url: string;
+    type?: "github" | "gitlab" | "demo" | "drive" | "youtube" | "itchio" | "website";
+}
+
+// Servira peut-être un jour
+export interface ProjectContent {
+    overview?: string;
+    challenges?: string;
+    solutions?: string;
+    results?: string;
+}
+
 export interface Project {
     idProject: number;
-    img: string;
     name: string;
+    img: string;
     resume: string;
     features: string[];
     tags: string[];
-    url_depot?: string;
-    url_web?: string;
+    links?: ProjectLink[];
+    content?: ProjectContent;
 }
+
+/* =========================
+   HELPERS
+========================= */
+
+const github = (url: string): ProjectLink => ({
+    label: "GitHub",
+    url,
+    type: "github",
+});
+
+const gitlab = (url: string): ProjectLink => ({
+    label: "GitLab",
+    url,
+    type: "gitlab",
+});
+
+const demo = (url: string): ProjectLink => ({
+    label: "Démo",
+    url,
+    type: "demo",
+});
+
+const drive = (url: string): ProjectLink => ({
+    label: "Google Drive",
+    url,
+    type: "drive",
+});
+
+const youtube = (url: string): ProjectLink => ({
+    label: "YouTube",
+    url,
+    type: "youtube",
+});
+
+const itchio = (url: string): ProjectLink => ({
+    label: "Itch.io",
+    url,
+    type: "itchio",
+});
+
+const website = (label: string, url: string): ProjectLink => ({
+    label,
+    url,
+    type: "website",
+});
+
+/* =========================
+   PROJETS
+========================= */
 
 export const projects: Project[] = [
     {
         idProject: 1,
-        img: getImageProjectUrl("project-hmm-main.webp"),
         name: "HMMMM",
+        img: getImageProjectUrl("project-hmm-main.webp"),
         resume:
             "Pour notre dernier projet de Terminale en NSI, notre professeur nous a demandé de créer un projet en " +
             "JavaScript. Avec deux amis, nous avons mis 1 à 2 mois à réaliser ce site web en parallèle des cours. " +
@@ -44,36 +151,44 @@ export const projects: Project[] = [
             "(et possède une fin) !",
         features: [
             "Interaction avec l’utilisateur",
-            "Mécanismes de “frustration/challenge”",
-            "Progression et fin du jeu"
+            "Mécaniques de frustration/challenge",
+            "Progression et fin du jeu",
         ],
         tags: ["Javascript", "HTML", "CSS"],
-        url_depot: "https://github.com/Benjamin-DG44/Projet_HMMMM",
-        url_web: "https://benjamin-dg44.github.io/Projet_HMMMM",
+        links: [
+            github("https://github.com/Benjamin-DG44/Projet_HMMMM"),
+            demo("https://benjamin-dg44.github.io/Projet_HMMMM"),
+        ],
     },
+
     {
         idProject: 2,
-        img: getImageProjectUrl("project-unity2d-main.webp"),
         name: "Jeu vidéo en 2D",
-        resume: "Pour commencer à acquérir des connaissances en développement de jeux vidéo, j'ai suivi un \n" +
-            "tutoriel d'un youtubeur français pour créer un jeu 2D. J'ai apprécié cette expérience, bien \n" +
-            "que le projet soit resté inachevé en raison de bugs liés aux versions différentes du logiciel \n" +
+        img: getImageProjectUrl("project-unity2d-main.webp"),
+        resume:
+            "Pour commencer à acquérir des connaissances en développement de jeux vidéo, j'ai suivi un " +
+            "tutoriel d'un youtubeur français pour créer un jeu 2D. J'ai apprécié cette expérience, bien " +
+            "que le projet soit resté inachevé en raison de bugs liés aux versions différentes du logiciel " +
             "et de la concentration nécessaire pour suivre de longs épisodes (37) de 30 minutes à 1 heure chacun.",
         features: [
             "Mouvements du personnage",
-            "2 niveaux différents",
-            "Système de GAME OVER"
+            "Deux niveaux",
+            "Système de Game Over",
         ],
         tags: ["C#", "Unity"],
-        url_web: "https://www.youtube.com/watch?v=WtDXk6uuZO4"
+        links: [
+            youtube("https://www.youtube.com/watch?v=WtDXk6uuZO4"),
+        ],
     },
+
     {
         idProject: 3,
-        img: getImageProjectUrl("project-ropebound_rescue-main.webp"),
         name: "Ropebound Rescue",
-        resume: "Ropebound Rescue est un prototype de jeu créé lors de ma première game jam, un événement où \n" +
-            "l'on développe un jeu sur un thème imposé en temps limité (ici 48h). Nous étions deux pour \n" +
-            "concevoir ce jeu autour du thème “connexion” : une corde relie deux personnages contrôlés par \n" +
+        img: getImageProjectUrl("project-ropebound_rescue-main.webp"),
+        resume:
+            "Ropebound Rescue est un prototype de jeu créé lors de ma première game jam, un événement où " +
+            "l'on développe un jeu sur un thème imposé en temps limité (ici 48h). Nous étions deux pour " +
+            "concevoir ce jeu autour du thème “connexion” : une corde relie deux personnages contrôlés par " +
             "un seul joueur. Le but est d'activer des leviers pour avancer dans les niveaux.",
         features: [
             "2 personnages contrôlables",
@@ -81,65 +196,78 @@ export const projects: Project[] = [
             "Mouvement des personnages restreint par une corde"
         ],
         tags: ["C#", "Unity"],
-        url_web: "https://asxiox.itch.io/ropebound-rescue"
+        links: [
+            itchio("https://asxiox.itch.io/ropebound-rescue"),
+        ],
     },
+
     {
         idProject: 4,
-        img: getImageProjectUrl("project-traitements_python-main.webp"),
         name: "Projet Python : Analyse de logs",
-        resume: "Le projet \"Analyse de logs\" est le premier a avoir été réalisé durant ma première \n" +
-            "année en BTS SIO. Le but de ce projet est de trier les informations provenant d'un fichier CSV ou TXT. \n" +
-            "Puis de transférer les informations voulu dans un fichier SQL, pour les ajouter à une base de donnée \n" +
-            "existante. Ce projet a été très enrichissant, il m'a permis de travailler en binôme et de développer \n" +
+        img: getImageProjectUrl("project-traitements_python-main.webp"),
+        resume: "Le projet \"Analyse de logs\" est le premier a avoir été réalisé durant ma première " +
+            "année en BTS SIO. Le but de ce projet est de trier les informations provenant d'un fichier CSV ou TXT. " +
+            "Puis de transférer les informations voulu dans un fichier SQL, pour les ajouter à une base de donnée " +
+            "existante. Ce projet a été très enrichissant, il m'a permis de travailler en binôme et de développer " +
             "de nouvelles compétences en Python.",
         features: [
-            "Extraction de données depuis un fichier au format TXT",
-            "Insertion des données au format CSV",
-            "Insertion des données dans une BDD MariaBD"
+            "Extraction de données depuis un fichier texte",
+            "Conversion des données aux formats CSV",
+            "Insertion des données dans une BDD MariaDB",
         ],
         tags: ["Python", "SQL"],
-        url_depot: "https://github.com/Benjamin-DG44/Projet_Python_Analyse_Logs",
-        url_web: G_DRIVE_PROJET_JANVIER
+        links: [
+            github("https://github.com/Benjamin-DG44/Projet_Python_Analyse_Logs"),
+            drive(G_DRIVE_PROJET_JANVIER),
+        ],
     },
+
     {
         idProject: 5,
+        name: "Projet Java : CRUD",
         img: getImageProjectUrl("project-java_crud-main.webp"),
-        name: "Projet Java : Opérations CRUD : ",
-        resume: "Le projet \"Thali\" consiste en la mise en place de l'opération CRUD (Create, Read, Update, Delete) \n" +
-            "sur un logiciel codé en JAVA pour une entreprise d'agence de voyage. En parallèle, les informations \n" +
-            "que l'utilisateur rentrait, modifiait une base de données SQL. Ce projet m'a permis de nouveau de \n" +
-            "travailler en binôme. Il m'a aussi appris à travailler sur un projet prémonté (en partie) et donc de \n" +
+        resume: "Le projet \"Thali\" consiste en la mise en place de l'opération CRUD (Create, Read, Update, Delete) " +
+            "sur un logiciel codé en JAVA pour une entreprise d'agence de voyage. En parallèle, les informations " +
+            "que l'utilisateur rentrait, modifiait une base de données SQL. Ce projet m'a permis de nouveau de " +
+            "travailler en binôme. Il m'a aussi appris à travailler sur un projet prémonté (en partie) et donc de " +
             "savoir m'adapter.",
         features: [
-            "Création des opérations CRUD",
-            "Manipulation d'interfaces graphiques (Swing)",
-            "Liaison des données avec une BDD"
+            "Opérations CRUD",
+            "Interfaces Swing",
+            "Connexion base SQL",
         ],
         tags: ["Java", "SQL", "Swing"],
-        url_depot: "https://github.com/Benjamin-DG44/Projet_Java_Thali",
-        url_web: G_DRIVE_PROJET_THALI
+        links: [
+            github("https://github.com/Benjamin-DG44/Projet_Java_Thali"),
+            drive(G_DRIVE_PROJET_THALI),
+        ],
     },
+
     {
         idProject: 6,
-        img: getImageProjectUrl("project-intranet-main.webp"),
         name: "Projet PHP : Intranet",
-        resume: "Le projet \"Intranet\" consiste en la mise en place d'outils permettant aux employés d'une organisation \n" +
-            "fictive nommée \"Corpany\". Nous étions 3 à travailler sur ce projet, durant lequel nous devions remplir\n" +
-            "des missions chaque semaine. Ces missions nous guidait sur la mise en place de notre intranet. Ainsi,\n" +
-            "on a implémenté un tableau de bord, un espace de documents, un agenda, une messagerie, et les opérations \n" +
+        img: getImageProjectUrl("project-intranet-main.webp"),
+        resume: "Le projet \"Intranet\" consiste en la mise en place d'outils permettant aux employés d'une organisation " +
+            "fictive nommée \"Corpany\". Nous étions 3 à travailler sur ce projet, durant lequel nous devions remplir" +
+            "des missions chaque semaine. Ces missions nous guidait sur la mise en place de notre intranet. Ainsi," +
+            "on a implémenté un tableau de bord, un espace de documents, un agenda, une messagerie, et les opérations " +
             "CRUD pour les administrateurs.",
         features: [
-            "Mise en place d'un système d'authentification (identifiant/mot de passe)",
-            "Création d'une messagerie et d'un espace de stockage personnel",
-            "Définition et gestion des rôles utilisateurs avec droits spécifiques",
+            "Authentification (identifiant / mot de passe)",
+            "Messagerie et espace de stockage personnel",
+            "Gestion des rôles avec droits spécifiques",
         ],
         tags: ["PHP", "HTML", "CSS", "SQL", "Python"],
-        url_depot: "https://gitlab.com/AnaisPrt/projet-intranet",
-        url_web: G_DRIVE_PROJET_INTRANET
-    }, {
+        links: [
+            gitlab("https://gitlab.com/AnaisPrt/projet-intranet"),
+            drive(G_DRIVE_PROJET_INTRANET),
+        ],
+    },
+
+    {
         idProject: 7,
-        img: getImageProjectUrl("project-veille_passwordless-main.webp"),
         name: "Veille technologique n°1 : Passwordless",
+        img: getImageProjectUrl("project-veille_passwordless-main.webp"),
         resume: "Les mots de passe sont-ils devenus obsolètes à l’ère du passwordless ? C'est la question à la quelle " +
             "cette veille technologique va répondre. En conclusion, les mots de passe ne sont pas encore devenus " +
             "obsolètes. Le coût économique pour mettre en place les nouveaux moyens d'authentification est beaucoup " +
@@ -150,45 +278,62 @@ export const projects: Project[] = [
             "Scanners biométriques (empreintes digitales, rétiniens)",
         ],
         tags: ["Feedly", "Google Actualités"],
-        url_web: G_DRIVE_PROJET_VEILLE_1
+        links: [
+            drive(G_DRIVE_PROJET_VEILLE_1),
+        ],
     },
+
     {
         idProject: 8,
-        img: getImageProjectUrl("project-scr-main.webp"),
         name: "Stage : Développement d'une app",
-        resume: "Durant mon stage chez SCR Informatiques, j'ai eu pour mission principale le développement d'une application\n" +
-            "mobile, nommée AVI. Cette application va servir aux formateurs et aux commerciaux de l'entreprise pour réserver \n" +
-            "et noter des restaurants et des hôtels lors de leurs déplacements. J'ai pu assister à la construction d'un projet, \n" +
-            "de sa phase de réflexion à sa phase de développement. Ce qui m'a pris le plus de temps sur ce projet d'entreprise, \n" +
+        img: getImageProjectUrl("project-scr-main.webp"),
+        resume: "Durant mon stage chez SCR Informatiques, j'ai eu pour mission principale le développement d'une application" +
+            "mobile, nommée AVI. Cette application va servir aux formateurs et aux commerciaux de l'entreprise pour réserver " +
+            "et noter des restaurants et des hôtels lors de leurs déplacements. J'ai pu assister à la construction d'un projet, " +
+            "de sa phase de réflexion à sa phase de développement. Ce qui m'a pris le plus de temps sur ce projet d'entreprise, " +
             "est le développement d'une API.",
         features: [
             "Conception d'un MCD et d'un MLD",
             "Mise en place d'une API REST et d'une BDD",
             "Programmer les formulaires de création et la navigation entre les pages",
         ],
-        tags: ["React", "React Native", "CSS", "Prisma", "Express JS", "Javascript", "TypeScript", "PostgreSQL"],
-        url_web: G_DRIVE_STAGE_1
+        tags: [
+            "React",
+            "React Native",
+            "Prisma",
+            "Express JS",
+            "TypeScript",
+            "PostgreSQL",
+        ],
+        links: [
+            drive(G_DRIVE_STAGE_1),
+        ],
     },
+
     {
         idProject: 9,
-        img: getImageProjectUrl("project-r3st0_web-main.webp"),
         name: "Site web : R3st0.fr",
-        resume: "Le projet R3st0.fr vise à créer un site web de critiques de restaurants, permettant aux utilisateurs de " +
+        img: getImageProjectUrl("project-r3st0_web-main.webp"),
+        resume:
+            "Le projet R3st0.fr vise à créer un site web de critiques de restaurants, permettant aux utilisateurs de " +
             "consulter et laisser des avis. Cela leur facilite le choix du restaurant dans lequel ils vont à aller manger.",
         features: [
-            "Critique des restaurants (étoiles)",
-            "Compte utilisateurs",
-            "Recherches multi-critères"
+            "Avis utilisateurs (commentaires et notation)",
+            "Comptes utilisateurs",
+            "Recherche multicritères",
         ],
         tags: ["HTML", "CSS", "Javascript", "PHP", "SQL"],
-        url_depot: "https://gitlab.com/Jtaille/p1_g3_siteresto2025",
-        url_web: G_DRIVE_PROJET_R3ST0_FR
+        links: [
+            gitlab("https://gitlab.com/Jtaille/p1_g3_siteresto2025"),
+            drive(G_DRIVE_PROJET_R3ST0_FR),
+        ],
     },
+
     {
         idProject: 10,
-        img: getImageProjectUrl("project-veille_vibe_coding-main.webp"),
         name: "Veille technologique n°2 : Vibe coding",
-        resume: "Problématique : Le vibe coding va-t-il redéfinir le métier de développeur et la façon de produire du logiciel ?\n" +
+        img: getImageProjectUrl("project-veille_vibe_coding-main.webp"),
+        resume: "Problématique : Le vibe coding va-t-il redéfinir le métier de développeur et la façon de produire du logiciel ?" +
             "Le vibe coding accélère la création de logiciels et permet aux non-développeurs de produire des applications, " +
             "mais il ne remplace pas l’expertise humaine : il transforme les méthodes de production tout en exigeant supervision " +
             "et vérification pour garantir la maintenabilité, la sécurité et la conformité légale.",
@@ -198,27 +343,36 @@ export const projects: Project[] = [
             "Simulation et test automatisés"
         ],
         tags: ["Feedly", "Google Actualités", "TLDR", "Daily.dev"],
-        url_web: G_DRIVE_PROJET_VEILLE_2
+        links: [
+            drive(G_DRIVE_PROJET_VEILLE_2),
+        ],
     },
+
     {
         idProject: 11,
+        name: "Autoformation : JavaFX et persistance",
         img: getImageProjectUrl("project-exercices_java-main.webp"),
-        name: "Autoformation : JavaFX et persistence",
         resume: "J’ai réalisé cette application desktop en Java à partir d’un tutoriel de 2015, en utilisant JavaFX " +
             "et la persistance des données, et je souhaite désormais y apporter mes propres modifications.",
         features: [
-            "Découverte de JavaFX et persistence des données",
-            "Exercices évolutifs (en cours de développement)",
-            "Déploiement en JAR"
+            "Découverte de JavaFX",
+            "Persistance des données",
+            "Déploiement d'un JAR",
         ],
         tags: ["Java", "JavaFX", "Maven"],
-        url_depot: "https://github.com/Benjamin-DG44/Entrainement_Java",
-        url_web: "https://code.makery.ch/fr/library/javafx-tutorial/"
+        links: [
+            github("https://github.com/Benjamin-DG44/Entrainement_Java"),
+            website(
+                "Tutoriel",
+                "https://code.makery.ch/fr/library/javafx-tutorial/"
+            ),
+        ],
     },
+
     {
         idProject: 12,
-        img: getImageProjectUrl("project-r3st0_android-main.webp"),
         name: "Application native android : R3st0",
+        img: getImageProjectUrl("project-r3st0_android-main.webp"),
         resume: "Développement d'une application Android permettant la consultation et la réservation de table dans des " +
             "restaurants via une API REST. La base de données utilisée est inspirée du \"R3st0.fr\"",
         features: [
@@ -227,67 +381,69 @@ export const projects: Project[] = [
             "Consultation de la fiche des restaurants"
         ],
         tags: ["Android", "Java", "PHP"],
-        url_depot: "https://gitlab.com/AnaisPrt/p2_g7_2slam_ap_projet_android",
-        url_web: G_DRIVE_PROJET_R3STO_ANDROID
+        links: [
+            gitlab("https://gitlab.com/AnaisPrt/p2_g7_2slam_ap_projet_android"),
+            drive(G_DRIVE_PROJET_R3STO_ANDROID),
+        ],
     },
+
     {
         idProject: 13,
-        img: getImageProjectUrl("project-exercices_java-main.webp"),
         name: "Autoformation : Java",
+        img: getImageProjectUrl("project-exercices_java-main.webp"),
         resume: "Projet personnel d’autoformation en Java à travers une série d’exercices progressifs. " +
             "L’objectif est d’approfondir les bases du langage tout en explorant des concepts plus avancés " +
             "tels que la structuration d’un projet, la manipulation de données et l’utilisation de bibliothèques " +
             "standards.",
         features: [
-            "Lecture / Écriture de fichiers",
-            "Exercices évolutifs (en cours de développement)"
+            "Lecture / écriture de fichiers",
+            "Exercices évolutifs",
         ],
         tags: ["Java"],
-        url_depot: "https://github.com/Benjamin-DG44/Entrainement_Java",
+        links: [
+            github("https://github.com/Benjamin-DG44/Entrainement_Java"),
+        ],
     },
+
     {
         idProject: 14,
-        img: getImageProjectUrl("project-scr-main.webp"),
         name: "Stage : Développement d'une app (suite)",
+        img: getImageProjectUrl("project-scr-main.webp"),
         resume: "Durant ce second stage chez SCR Informatiques, j'ai eu l'opportunité de poursuivre le projet que j'avais " +
             "débuté l'année dernière en binôme. L'objectif durant ces 6 semaines de stage étaient de refactoriser " +
             "l'API, de rendre l'application mobile dynamique et de sortir un APK.",
         features: [
             "Refactorisation de l'API, migration de l'ORM Prisma (v6 -> v7)",
-            "Refonte et développement de formulaires et d'écrans",
-            "Déploiement sous la forme d'un APK",
+            "Refonte des écrans et formulaires",
+            "Génération d'un APK",
         ],
-        tags: ["React Native", "CSS", "Prisma", "Fastify", "TypeScript", "Zod", "PostgreSQL"],
+        tags: [
+            "React Native",
+            "Prisma",
+            "Fastify",
+            "TypeScript",
+            "Zod",
+            "PostgreSQL",
+        ],
     },
+
     {
         idProject: 15,
-        img: getImageProjectUrl("project-r3st0_desktop-main.png"),
         name: "Application de modération",
+        img: getImageProjectUrl("project-r3st0_desktop-main.png"),
         resume: "Application de bureau codée en Java, structurée selon une architecture MVC, en équipe de 3. Le rôle de cette " +
             "application est de gérer les avis des restaurants provenant du site web \"R3s0.fr\". Cette application " +
             "possède deux types d'utilisateurs : les modérateurs et les responsables. Un responsable possède plus de " +
             "droits qu'un modérateur.",
         features: [
-            "Connexion à l'application restreinte (modérateurs et responsables)",
-            "Principe du moindre privilèges",
-            "Gestion des commentaires",
+            "Authentification (modérateurs et responsables)",
+            "Gestion des rôles, principe du moindre privilèges ",
+            "Modération des commentaires",
         ],
         tags: ["Java", "Swing"],
-        url_depot: "https://gitlab.com/AnaisPrt/p3_g1_projet_moderation",
-        url_web: G_DRIVE_PROJET_R3STO_DESKTOP
+        links: [
+            gitlab("https://gitlab.com/AnaisPrt/p3_g1_projet_moderation"),
+            drive(G_DRIVE_PROJET_R3STO_DESKTOP),
+        ],
     },
 ];
-// TODO : intégrer la future seconde page de mon site
-// {
-// idProject: 0,
-//     img: getImageProjectUrl(""),
-//     name: "",
-//     resume: "",
-//     features: [
-//     "",
-//     "",
-//     ""
-// ],
-//     tags: ["", ""],
-//     url_web: ""
-//     },

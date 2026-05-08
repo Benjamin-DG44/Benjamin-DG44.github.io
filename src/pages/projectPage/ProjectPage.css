@@ -1,0 +1,194 @@
+/* ===== PAGE ===== */
+
+.project-page {
+    background-color: var(--primary-300);
+    color: var(--text-800);
+    text-align: left;
+}
+
+/* Tous les styles sont scoped automatiquement */
+.project-page * {
+    box-sizing: border-box;
+}
+
+/* ===== HERO ===== */
+
+.project-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 40vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.85));
+}
+
+.project-hero-content {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-align: left;
+}
+
+.project-title {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+/* ===== LAYOUT ===== */
+
+.project-container {
+    max-width: 1200px;
+    margin-top: 40vh;
+    /*padding: 3rem 2rem;*/
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+/* ===== SIDEBAR ===== */
+
+.project-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-sidebar,
+.project-main {
+    min-width: 0;
+}
+
+/* ===== CARD ===== */
+
+.project-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ===== TITRES ===== */
+
+.project-section-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-section-marker {
+    width: 4px;
+    height: 20px;
+    background: var(--purple-500);
+    border-radius: 2px;
+}
+
+.project-section-title {
+    font-size: var(--font-size-xl);
+}
+
+.project-section-subtitle {
+    font-size: var(--font-size-lg);
+}
+
+/* ===== BADGES ===== */
+
+/*.project-badges {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    gap: 0.5rem;*/
+/*}*/
+
+/*.project-badge {*/
+/*    background: rgba(147, 51, 234, 0.2);*/
+/*    color: var(--text-100);*/
+/*    padding: 0.3rem 0.6rem;*/
+/*    border-radius: var(--border-radius-sm);*/
+/*    font-size: var(--font-size-sm);*/
+/*}*/
+
+/* ===== LISTE ===== */
+
+.project-list {
+    list-style: none;
+}
+
+.project-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== MAIN ===== */
+
+.project-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-main p {
+    font-size: var(--font-size-base);
+    color: var(--text-200);
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* ===== CTA ===== */
+
+.project-cta {
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    background: linear-gradient(
+            to bottom right,
+            rgba(147, 51, 234, 0.1),
+            rgba(59, 130, 246, 0.1)
+    );
+    border: 1px solid rgba(147, 51, 234, 0.2);
+}
+
+.project-cta .text-sm {
+    font-size: var(--font-size-sm);
+    color: var(--text-200);
+}
+
+.project-cta .project-button {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: var(--font-size-sm);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-hero {
+        height: 300px;
+
+    }
+
+    .project-title {
+        font-size: var(--font-size-2xl);
+    }
+}

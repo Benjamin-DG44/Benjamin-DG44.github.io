@@ -1,14 +1,14 @@
 import * as React from "react";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import {CONTACT_URL, GITHUB_ACCOUNT_URL, GITLAB_ACCOUNT_URL, LINKEDIN_ACCOUNT_URL, PDF_CV} from "../../constants/URL";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import {CONTACT_URL, GITHUB_ACCOUNT_URL, GITLAB_ACCOUNT_URL, LINKEDIN_ACCOUNT_URL, PDF_CV} from "../../../constants/URL";
 import "./Contact.css";
 import {Check, Copy, MailCheck, Send} from "lucide-react";
-import SwitchIcons from "../../components/SwitchIcons/SwitchIcons";
-import {EMAIL} from "../../constants/Data";
-import Button from "../../components/Button/Button";
+import SwitchIcons from "../../../components/SwitchIcons/SwitchIcons";
+import {EMAIL} from "../../../constants/Data";
+import Button from "../../../components/Button/Button";
 import {HugeiconsIcon} from "@hugeicons/react";
 import {GithubIcon, GitlabIcon, Linkedin02Icon} from "@hugeicons/core-free-icons/index";
-import FadeAnimation from "../../components/FadeAnimation/FadeAnimation";
+import FadeAnimation from "../../../components/FadeAnimation/FadeAnimation";
 
 
 function Contact() {

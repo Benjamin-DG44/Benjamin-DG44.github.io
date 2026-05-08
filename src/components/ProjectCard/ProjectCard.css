@@ -85,61 +85,6 @@
     gap: 1rem;
 }
 
-.project-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding-block: 0.35rem;
-    text-decoration: none;
-    flex: 1;
-    border-radius: var(--border-radius-sm);
-    border: 0.1px solid rgba(113, 113, 130, 0.5);
-
-}
-
-.project-button:hover {
-    background-color: #efefef;
-}
-
-.project-button-github {
-    background-color: var(--text-800);
-}
-
-.project-button-github:hover {
-    background-color: #303030;
-    border-color: #303030;
-}
-
-.project-button-gitlab {
-    background-color: var(--gitlab-color);
-    border-color: var(--gitlab-color);
-}
-
-.project-button-gitlab:hover {
-    background-color: #fbaa36;
-    border-color: #fbaa36;
-}
-
-.project-link {
-    color: var(--github-color);
-}
-
-.project-link-github, .project-link-gitlab {
-    color: var(--primary-500);
-}
-
-
-.project-icon {
-    width: clamp(20px, 2vw, 24px);
-    height: clamp(20px, 2vw, 24px);
-}
-
-.logo-github { color: var(--primary-500); }
-.logo-gitlab { color: var(--primary-500); }
-.logo-website { color: var(--text-800); }
-
-
 /*Aligne les boutons sur l'axe vertical */
 @media (max-width: 600px) {
     .project-buttons-row {

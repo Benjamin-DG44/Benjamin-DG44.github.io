@@ -1,0 +1,84 @@
+.project-button:hover {
+    background-color: var(--primary-500);
+}
+
+.project-button-github {
+    background-color: var(--text-800);
+}
+
+.project-button-github:hover {
+    background-color: #303030;
+    border-color: #303030;
+}
+
+.project-button-gitlab {
+    background-color: var(--gitlab-color);
+    border-color: var(--gitlab-color);
+}
+
+.project-button-gitlab:hover {
+    background-color: #fbaa36;
+    border-color: #fbaa36;
+}
+
+.project-link-depot {
+    color: var(--primary-500);
+}
+
+.project-icon {
+    width: clamp(20px, 2vw, 24px);
+    height: clamp(20px, 2vw, 24px);
+}
+
+/* =========================
+   VARIANTE MINIMAL
+========================= */
+
+.project-button-minimal {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    width: 100%;
+    padding: 0.45rem 0.7rem;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.82rem;
+    font-weight: 500;
+    min-height: 38px;
+}
+
+/* ===== Couleurs ===== */
+
+.project-button-minimal.project-button-github, .project-button-minimal.project-button-gitlab  {
+    border: none;
+}
+
+/* ===== Texte ===== */
+
+/*.project-link-small {*/
+/*    font-size: 0.82rem;*/
+/*    font-weight: 500;*/
+/*    line-height: 1;*/
+/*}*/
+
+.project-button-minimal.project-button-github:hover {
+    background-color: #303030;
+}
+
+.project-button-minimal.project-button-gitlab:hover {
+    background-color: #fbaa36;
+}
+
+/* ===== Icônes ===== */
+
+.project-button-minimal .project-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* ==== Léger hover ==== */
+.project-button-minimal:hover {
+    background-color: rgb(189 188 188 / 0.1);
+}

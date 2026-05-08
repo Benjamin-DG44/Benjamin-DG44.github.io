@@ -1,10 +1,10 @@
 import * as React from "react";
 import "./Home.css";
 import {Link} from "react-scroll";
-import Button from "../../components/Button/Button";
-import {ABOUT_URL, G_DRIVE_RECAP, HOME_URL, PDF_CV, PROJECTS_URL} from "../../constants/URL";
+import Button from "../../../components/Button/Button";
+import {ABOUT_URL, HOME_URL, PDF_CV, PROJECTS_URL} from "../../../constants/URL";
 import {ChevronDown} from "lucide-react";
-import FadeAnimation from "../../components/FadeAnimation/FadeAnimation";
+import FadeAnimation from "../../../components/FadeAnimation/FadeAnimation";
 
 function Home() {
     return (

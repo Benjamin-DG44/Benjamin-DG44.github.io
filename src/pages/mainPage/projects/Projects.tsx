@@ -1,12 +1,12 @@
 import './Projects.css'
-import {PROJECTS_URL} from "../../constants/URL";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import Grid from "../../components/Grid/Grid";
-import Button from "../../components/Button/Button";
+import {PROJECTS_URL} from "../../../constants/URL";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import Grid from "../../../components/Grid/Grid";
+import Button from "../../../components/Button/Button";
 import * as React from "react";
-import ProjectCardList from "../../components/ProjectCardList/ProjectCardList";
-import ProjectCardListRemaining from "../../components/ProjectCardListRemaining/ProjectCardListRemaining";
-import FadeAnimation from "../../components/FadeAnimation/FadeAnimation";
+import ProjectCardList from "../../../components/ProjectCardList/ProjectCardList";
+import ProjectCardListRemaining from "../../../components/ProjectCardListRemaining/ProjectCardListRemaining";
+import FadeAnimation from "../../../components/FadeAnimation/FadeAnimation";
 
 function Projects() {
     const [showRemaining, setShowRemaining] = React.useState(false); // Gère l'affichage du reste des projets

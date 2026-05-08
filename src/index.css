@@ -215,3 +215,20 @@ p {
     margin-top: 2rem;
     gap:1.5rem 2rem;
 }
+
+.project-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-block: 0.35rem;
+    text-decoration: none;
+    flex: 1;
+    border-radius: var(--border-radius-sm);
+    border: 0.1px solid rgba(113, 113, 130, 0.5);
+
+}
+
+.logo-github { color: var(--primary-500); }
+.logo-gitlab { color: var(--primary-500); }
+.logo-website { color: var(--text-800); }

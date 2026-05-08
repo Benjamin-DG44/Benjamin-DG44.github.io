@@ -1,7 +1,7 @@
 import * as React from "react";
-import {TYPEWRITER_URL} from "../../constants/URL";
+import {TYPEWRITER_URL} from "../../../constants/URL";
 import './TypeWriter.css';
-import TypeWriterAnimation from "../../components/TypeWriterAnimation/TypeWriterAnimation";
+import TypeWriterAnimation from "../../../components/TypeWriterAnimation/TypeWriterAnimation";
 
 function TypeWriter() {
     return(

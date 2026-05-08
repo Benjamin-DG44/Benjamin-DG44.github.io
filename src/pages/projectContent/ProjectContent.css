@@ -1,0 +1,66 @@
+.project-content-text {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: var(--text-100);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.project-content-figure {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.project-content-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+    object-fit: contain;
+}
+
+.project-content-caption {
+    margin-top: 0.75rem;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--text-200);
+}
+
+/* =========================
+   LISTE
+========================= */
+
+.project-content-list {
+    padding-left: 0.5rem;
+}
+
+/* =========================
+   ITEM / PUCE
+========================= */
+
+.project-content-item {
+    padding-inline: 1rem;
+    margin-bottom: 2rem;
+}
+
+.project-content-item-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style-type:none;
+}
+
+.project-content-item-header::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+}
+
+.project-content-item-body {
+    padding-left: 1.5rem;
+}

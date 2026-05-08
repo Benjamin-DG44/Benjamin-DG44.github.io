@@ -1,12 +1,12 @@
 import './About.css'
-import {ABOUT_URL, MY_PHOTO} from "../../constants/URL";
-import TagList from "../../components/TagsList/TagList";
-import {personnal_skills, soft_skills, softwares} from "../../constants/Data";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import Card from "../../components/Card/Card";
-import Grid from "../../components/Grid/Grid";
-import SubTitle from "../../components/SubTitle/SubTitle";
-import FadeAnimation from "../../components/FadeAnimation/FadeAnimation";
+import {ABOUT_URL, MY_PHOTO} from "../../../constants/URL";
+import TagList from "../../../components/TagsList/TagList";
+import {personnal_skills, soft_skills, softwares} from "../../../constants/Data";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import Card from "../../../components/Card/Card";
+import Grid from "../../../components/Grid/Grid";
+import SubTitle from "../../../components/SubTitle/SubTitle";
+import FadeAnimation from "../../../components/FadeAnimation/FadeAnimation";
 
 function About() {
     return (
