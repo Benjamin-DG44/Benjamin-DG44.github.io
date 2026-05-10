@@ -1,8 +1,8 @@
 // Fonctions
-import {getDocumentUrl, getImageUrl} from "../utils/getUrls";
+import {getDocument, getImage} from "../utils/getUtils";
 
 // Téléchargements
-export const PDF_CV = getDocumentUrl('CV_DELAUNAY-GUITTON_Benjamin.pdf');
+export const PDF_CV = getDocument('CV_DELAUNAY-GUITTON_Benjamin.pdf');
 
 // Sections
 export const HOME_URL = "home";
@@ -34,6 +34,5 @@ export const G_DRIVE_PROJET_R3ST0_FR = "https://drive.google.com/drive/folders/1
 export const G_DRIVE_PROJET_R3STO_ANDROID = "https://drive.google.com/drive/folders/1UlNwy2VEvDGDxgJzFiuIAG4WdItwoZK8?usp=drive_link"
 export const G_DRIVE_PROJET_R3STO_DESKTOP = "https://drive.google.com/drive/folders/1T6Hi10kJZdLsqfPrzGKnYbjsMvJh0gOe?usp=drive_link"
 
-
 // TODO : Convertir toutes les images au format WEBP
-export const MY_PHOTO = getImageUrl('profile-pic_1.png');
+export const MY_PHOTO = getImage('profile-pic_1.png');

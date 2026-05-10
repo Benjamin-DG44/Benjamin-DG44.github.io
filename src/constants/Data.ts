@@ -1,4 +1,4 @@
-import {getImageProjectUrl} from "../utils/getUrls";
+import {getProjectImage} from "../utils/getUtils";
 import {
     G_DRIVE_PROJET_INTRANET,
     G_DRIVE_PROJET_JANVIER,
@@ -70,14 +70,6 @@ export interface ProjectLink {
     type?: "github" | "gitlab" | "demo" | "drive" | "youtube" | "itchio" | "website";
 }
 
-// Servira peut-être un jour
-export interface ProjectContent {
-    overview?: string;
-    challenges?: string;
-    solutions?: string;
-    results?: string;
-}
-
 export interface Project {
     idProject: number;
     name: string;
@@ -86,7 +78,6 @@ export interface Project {
     features: string[];
     tags: string[];
     links?: ProjectLink[];
-    content?: ProjectContent;
 }
 
 /* =========================
@@ -143,7 +134,7 @@ export const projects: Project[] = [
     {
         idProject: 1,
         name: "HMMMM",
-        img: getImageProjectUrl("project-hmm-main.webp"),
+        img: getProjectImage(1, "main.webp"),
         resume:
             "Pour notre dernier projet de Terminale en NSI, notre professeur nous a demandé de créer un projet en " +
             "JavaScript. Avec deux amis, nous avons mis 1 à 2 mois à réaliser ce site web en parallèle des cours. " +
@@ -164,7 +155,7 @@ export const projects: Project[] = [
     {
         idProject: 2,
         name: "Jeu vidéo en 2D",
-        img: getImageProjectUrl("project-unity2d-main.webp"),
+        img: getProjectImage(2, "main.webp"),
         resume:
             "Pour commencer à acquérir des connaissances en développement de jeux vidéo, j'ai suivi un " +
             "tutoriel d'un youtubeur français pour créer un jeu 2D. J'ai apprécié cette expérience, bien " +
@@ -184,7 +175,7 @@ export const projects: Project[] = [
     {
         idProject: 3,
         name: "Ropebound Rescue",
-        img: getImageProjectUrl("project-ropebound_rescue-main.webp"),
+        img: getProjectImage(3, "main.webp"),
         resume:
             "Ropebound Rescue est un prototype de jeu créé lors de ma première game jam, un événement où " +
             "l'on développe un jeu sur un thème imposé en temps limité (ici 48h). Nous étions deux pour " +
@@ -204,7 +195,7 @@ export const projects: Project[] = [
     {
         idProject: 4,
         name: "Projet Python : Analyse de logs",
-        img: getImageProjectUrl("project-traitements_python-main.webp"),
+        img: getProjectImage(4, "main.webp"),
         resume: "Le projet \"Analyse de logs\" est le premier a avoir été réalisé durant ma première " +
             "année en BTS SIO. Le but de ce projet est de trier les informations provenant d'un fichier CSV ou TXT. " +
             "Puis de transférer les informations voulu dans un fichier SQL, pour les ajouter à une base de donnée " +
@@ -225,7 +216,7 @@ export const projects: Project[] = [
     {
         idProject: 5,
         name: "Projet Java : CRUD",
-        img: getImageProjectUrl("project-java_crud-main.webp"),
+        img: getProjectImage(5, "main.webp"),
         resume: "Le projet \"Thali\" consiste en la mise en place de l'opération CRUD (Create, Read, Update, Delete) " +
             "sur un logiciel codé en JAVA pour une entreprise d'agence de voyage. En parallèle, les informations " +
             "que l'utilisateur rentrait, modifiait une base de données SQL. Ce projet m'a permis de nouveau de " +
@@ -246,7 +237,7 @@ export const projects: Project[] = [
     {
         idProject: 6,
         name: "Projet PHP : Intranet",
-        img: getImageProjectUrl("project-intranet-main.webp"),
+        img: getProjectImage(6, "main.webp"),
         resume: "Le projet \"Intranet\" consiste en la mise en place d'outils permettant aux employés d'une organisation " +
             "fictive nommée \"Corpany\". Nous étions 3 à travailler sur ce projet, durant lequel nous devions remplir" +
             "des missions chaque semaine. Ces missions nous guidait sur la mise en place de notre intranet. Ainsi," +
@@ -267,7 +258,7 @@ export const projects: Project[] = [
     {
         idProject: 7,
         name: "Veille technologique n°1 : Passwordless",
-        img: getImageProjectUrl("project-veille_passwordless-main.webp"),
+        img: getProjectImage(7, "main.webp"),
         resume: "Les mots de passe sont-ils devenus obsolètes à l’ère du passwordless ? C'est la question à la quelle " +
             "cette veille technologique va répondre. En conclusion, les mots de passe ne sont pas encore devenus " +
             "obsolètes. Le coût économique pour mettre en place les nouveaux moyens d'authentification est beaucoup " +
@@ -286,7 +277,7 @@ export const projects: Project[] = [
     {
         idProject: 8,
         name: "Stage : Développement d'une app",
-        img: getImageProjectUrl("project-scr-main.webp"),
+        img: getProjectImage(8, "main.webp"),
         resume: "Durant mon stage chez SCR Informatiques, j'ai eu pour mission principale le développement d'une application" +
             "mobile, nommée AVI. Cette application va servir aux formateurs et aux commerciaux de l'entreprise pour réserver " +
             "et noter des restaurants et des hôtels lors de leurs déplacements. J'ai pu assister à la construction d'un projet, " +
@@ -313,7 +304,7 @@ export const projects: Project[] = [
     {
         idProject: 9,
         name: "Site web : R3st0.fr",
-        img: getImageProjectUrl("project-r3st0_web-main.webp"),
+        img: getProjectImage(9, "main.webp"),
         resume:
             "Le projet R3st0.fr vise à créer un site web de critiques de restaurants, permettant aux utilisateurs de " +
             "consulter et laisser des avis. Cela leur facilite le choix du restaurant dans lequel ils vont à aller manger.",
@@ -332,8 +323,8 @@ export const projects: Project[] = [
     {
         idProject: 10,
         name: "Veille technologique n°2 : Vibe coding",
-        img: getImageProjectUrl("project-veille_vibe_coding-main.webp"),
-        resume: "Problématique : Le vibe coding va-t-il redéfinir le métier de développeur et la façon de produire du logiciel ?" +
+        img: getProjectImage(10, "main.webp"),
+        resume: "Problématique : Le vibe coding va-t-il redéfinir le métier de développeur et la façon de produire du logiciel ? " +
             "Le vibe coding accélère la création de logiciels et permet aux non-développeurs de produire des applications, " +
             "mais il ne remplace pas l’expertise humaine : il transforme les méthodes de production tout en exigeant supervision " +
             "et vérification pour garantir la maintenabilité, la sécurité et la conformité légale.",
@@ -351,7 +342,7 @@ export const projects: Project[] = [
     {
         idProject: 11,
         name: "Autoformation : JavaFX et persistance",
-        img: getImageProjectUrl("project-exercices_java-main.webp"),
+        img: getProjectImage(11, "main.webp"),
         resume: "J’ai réalisé cette application desktop en Java à partir d’un tutoriel de 2015, en utilisant JavaFX " +
             "et la persistance des données, et je souhaite désormais y apporter mes propres modifications.",
         features: [
@@ -372,7 +363,7 @@ export const projects: Project[] = [
     {
         idProject: 12,
         name: "Application native android : R3st0",
-        img: getImageProjectUrl("project-r3st0_android-main.webp"),
+        img: getProjectImage(12, "main.webp"),
         resume: "Développement d'une application Android permettant la consultation et la réservation de table dans des " +
             "restaurants via une API REST. La base de données utilisée est inspirée du \"R3st0.fr\"",
         features: [
@@ -390,7 +381,7 @@ export const projects: Project[] = [
     {
         idProject: 13,
         name: "Autoformation : Java",
-        img: getImageProjectUrl("project-exercices_java-main.webp"),
+        img: getProjectImage(13, "main.webp"),
         resume: "Projet personnel d’autoformation en Java à travers une série d’exercices progressifs. " +
             "L’objectif est d’approfondir les bases du langage tout en explorant des concepts plus avancés " +
             "tels que la structuration d’un projet, la manipulation de données et l’utilisation de bibliothèques " +
@@ -408,7 +399,7 @@ export const projects: Project[] = [
     {
         idProject: 14,
         name: "Stage : Développement d'une app (suite)",
-        img: getImageProjectUrl("project-scr-main.webp"),
+        img: getProjectImage(14, "main.webp"),
         resume: "Durant ce second stage chez SCR Informatiques, j'ai eu l'opportunité de poursuivre le projet que j'avais " +
             "débuté l'année dernière en binôme. L'objectif durant ces 6 semaines de stage étaient de refactoriser " +
             "l'API, de rendre l'application mobile dynamique et de sortir un APK.",
@@ -430,7 +421,7 @@ export const projects: Project[] = [
     {
         idProject: 15,
         name: "Application de modération",
-        img: getImageProjectUrl("project-r3st0_desktop-main.png"),
+        img: getProjectImage(15, "main.png"),
         resume: "Application de bureau codée en Java, structurée selon une architecture MVC, en équipe de 3. Le rôle de cette " +
             "application est de gérer les avis des restaurants provenant du site web \"R3s0.fr\". Cette application " +
             "possède deux types d'utilisateurs : les modérateurs et les responsables. Un responsable possède plus de " +
@@ -447,3 +438,54 @@ export const projects: Project[] = [
         ],
     },
 ];
+
+export const projectImages = {
+    1: {
+        main: "/images/projects/project-1/main.webp",
+    },
+    2: {
+        main: "/images/projects/project-2/main.webp",
+    },
+    3: {
+        main: "/images/projects/project-3/main.webp",
+    },
+    4: {
+        main: "/images/projects/project-4/main.webp",
+    },
+    5: {
+        main: "/images/projects/project-5/main.webp",
+    },
+    6: {
+        main: "/images/projects/project-6/main.webp",
+        admin_panel: "/images/projects/project-6/admin-panel.png",
+        tableau_de_bord: "/images/projects/project-6/tableau-de-bord.png",
+        connexion: "/images/projects/project-6/connexion.png",
+    },
+    7: {
+        main: "/images/projects/project-7/main.webp",
+    },
+    8: {
+        main: "/images/projects/project-8/main.webp",
+    },
+    9: {
+        main: "/images/projects/project-9/main.webp",
+    },
+    10: {
+        main: "/images/projects/project-10/main.webp",
+    },
+    11: {
+        main: "/images/projects/project-11/main.webp",
+    },
+    12: {
+        main: "/images/projects/project-12/main.webp",
+    },
+    13: {
+        main: "/images/projects/project-13/main.webp",
+    },
+    14: {
+        main: "/images/projects/project-14/main.webp",
+    },
+    15: {
+        main: "/images/projects/project-15/main.webp",
+    },
+};

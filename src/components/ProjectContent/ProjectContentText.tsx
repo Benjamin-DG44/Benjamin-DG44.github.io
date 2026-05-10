@@ -9,7 +9,7 @@ export default function ProjectContentText({
                                                children,
                                            }: Props) {
     return (
-        <p className="project-content-text">
+        <p className="project-content-text text-sm">
             {children}
         </p>
     );

@@ -6,7 +6,7 @@ import {
     Globe02Icon,
     GoogleDriveFreeIcons,
 } from "@hugeicons/core-free-icons/index";
-import {getImageUrl} from "../../utils/getUrls";
+import {getImage, getLogo} from "../../utils/getUtils";
 import * as React from "react";
 import "./ProjectLinkButton.css";
 
@@ -46,7 +46,7 @@ export default function ProjectLinkButton({link, variant = "default"}: ProjectLi
             case "youtube":
                 return (
                     <img
-                        src={getImageUrl("youtube-logo.svg")}
+                        src={getLogo("youtube-logo.svg")}
                         alt="youtube-logo"
                         className="project-icon"
                     />
@@ -55,7 +55,7 @@ export default function ProjectLinkButton({link, variant = "default"}: ProjectLi
             case "itchio":
                 return (
                     <img
-                        src={getImageUrl("itchio-logo.svg")}
+                        src={getLogo("itchio-logo.svg")}
                         alt="itchio-logo"
                         className="project-icon"
                     />

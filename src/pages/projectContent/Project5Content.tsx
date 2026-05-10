@@ -7,11 +7,9 @@ import * as React from "react";
 import {CATEGORY_2, CATEGORY_4, getOriginalBTSSkill, getReformulatedBTSSkill} from "../../utils/getBTSSkills";
 import ProjectContentOriginalBTSSkill from "../../components/ProjectContent/ProjectContentOriginalBTSSkill";
 
-export default function Project4Content() {
-    const CR_DRIVE =
-        "https://drive.google.com/drive/folders/1D8Bmef7sz7VGj4bb3qTgEFS5NWe55-4G";
-
-    const CAHIER_DES_CHARGES = "https://docs.google.com/document/d/1mqtayLwtjwPFeSyTn9aDLrsNPR_mzJvBVz_8Bo2OT8s/edit?tab=t.0";
+export default function Project5Content() {
+    const CR_DRIVE = "https://drive.google.com/drive/folders/1NU_qIPuuNFlV8C9xPTjEUqyRSb1lhx6a";
+    const CAHIER_DES_CHARGES = "https://drive.google.com/drive/folders/16YqHo7lMlkB8SBxEyVyT5AUbbdXhbb4R";
     return (
         <>
             <ProjectTitle>
@@ -22,10 +20,9 @@ export default function Project4Content() {
             <ProjectContentItem
                 title={getReformulatedBTSSkill(CATEGORY_2, 2)}>
                 <ProjectContentText>
-                    En suivant les demandes définies dans le cahier des charges, j’ai développé plusieurs scripts Python
-                    permettant de lire, analyser et exploiter des fichiers logs. J’ai également réalisé des comptes
-                    rendus pour les différentes étapes du projet afin de présenter les traitements effectués et les
-                    résultats obtenus. {" "}
+                    J’ai répondu aux demandes d’évolution du prototype existant de l’application Java THALI_MINI en
+                    ajoutant ou modifiant des fonctionnalités (CRUD des excursions, gestion des étapes), tout en
+                    essayant de respecter les normes de développement et l’architecture MVC (GUI, DAO, métier).{" "}
                     <ProjectContentLink href={CR_DRIVE} text={"Compte-rendu"}/>
                 </ProjectContentText>
                 <ProjectContentOriginalBTSSkill skill={getOriginalBTSSkill(CATEGORY_2, 2)}/>
@@ -34,10 +31,9 @@ export default function Project4Content() {
             <ProjectContentCategory text={CATEGORY_4}/>
             <ProjectContentItem title={getReformulatedBTSSkill(CATEGORY_4, 0)}>
                 <ProjectContentText>
-                    Après analyse du cahier des charges, j’ai identifié les objectifs du projet et participé à
-                    l’organisation du travail en binôme. Nous avons réparti les tâches selon nos compétences : mon
-                    binôme s’est concentré sur la partie SQL tandis que j’ai principalement développé les scripts Python
-                    du projet.{" "}
+                    J’ai répondu aux demandes d’évolution du prototype existant de l’application Java THALI_MINI en
+                    ajoutant ou modifiant des fonctionnalités (CRUD des excursions, gestion des étapes), tout en
+                    essayant de respecter les normes de développement et l’architecture MVC (GUI, DAO, métier).
                     <ProjectContentLink href={CAHIER_DES_CHARGES} text={"Cahier des charges"}/>
                 </ProjectContentText>
                 <ProjectContentOriginalBTSSkill skill={getOriginalBTSSkill(CATEGORY_4, 0)}/>

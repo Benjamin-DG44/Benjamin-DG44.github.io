@@ -111,7 +111,7 @@ export default function ProjectPage() {
     function MainContent() {
         return <>
             {content && (
-                <div className="project-box">
+                <div className="project-main-content">
                     {content}
                 </div>
             )}
@@ -119,20 +119,22 @@ export default function ProjectPage() {
     }
 
     return (
-        <section className="project-page">
-            <Hero/>
-            <div className="project-container">
-                <div className="project-grid">
-                    <Aside/>
-                    <main className="project-main">
-                        <Resume/>
-                        <Separator/>
-                        <MainContent/>
-                        <CallToAction/>
-                    </main>
+        <>
+            <section className="project-page">
+                <Hero/>
+                <div className="project-container">
+                    <div className="project-grid">
+                        <Aside/>
+                        <main className="project-main">
+                            <Resume/>
+                            <Separator/>
+                            <MainContent/>
+                            <CallToAction/>
+                        </main>
+                    </div>
                 </div>
-            </div>
+            </section>
             <Footer/>
-        </section>
+        </>
     );
 }
