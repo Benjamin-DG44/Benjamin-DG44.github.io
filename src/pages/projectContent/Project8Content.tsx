@@ -10,6 +10,7 @@ import ProjectContentOriginalBTSSkill from "../../components/ProjectContent/Proj
 export default function Project8Content() {
     const RAPPORT_STAGE_1 = "https://drive.google.com/file/d/1TK3ARNokPRBhh4lqtiaR0LHzhN8empbA/view?usp=drive_link";
     const DIAPORAM_STAGE_1 = "https://drive.google.com/file/d/1M48rRyUYixGYW3wLASRra7FkhKpa3if_/view?usp=drive_link";
+    const CR_HEBDOMADAIRE = "https://drive.google.com/drive/folders/1mVYHtSGQs74JFPY0gM8UG7BEm45_ji7Q?usp=drive_link";
     const CAHIER_DES_CHARGES = "https://docs.google.com/document/d/1jw7fL1Zu7hKOq5r9IS64iETIyFGwLk0f/edit?usp=sharing&ouid=108508559207082762674&rtpof=true&sd=true";
 
     return (
@@ -27,6 +28,7 @@ export default function Project8Content() {
                     frontend via une API, conformément aux demandes d’évolution définies dans les réunions d’équipe et
                     le cahier des charges.{" "}
                     <ProjectContentLink href={RAPPORT_STAGE_1} text={"Rapport de stage n°1"}/>{" "}
+                    <ProjectContentLink href={CR_HEBDOMADAIRE} text={"Compte-rendu hebdomadaire"}/>{" "}
                     <ProjectContentLink href={DIAPORAM_STAGE_1} text={"Diaporame du sage n°1"}/>
                 </ProjectContentText>
                 <ProjectContentOriginalBTSSkill skill={getOriginalBTSSkill(CATEGORY_2, 2)}/>

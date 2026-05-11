@@ -3,6 +3,7 @@ import {getDocument, getImage} from "../utils/getUtils";
 
 // Téléchargements
 export const PDF_CV = getDocument('CV_DELAUNAY-GUITTON_Benjamin.pdf');
+export const TABLEAU_BTS = getDocument('DELAUNAY-GUITTON_Benjamin_SLAM_session_2026_TableauDeSynthese.pdf');
 
 // Sections
 export const HOME_URL = "home";
@@ -15,9 +16,6 @@ export const CONTACT_URL = "contact";
 export const GITLAB_ACCOUNT_URL = "https://gitlab.com/Benjamin-DG44";
 export const LINKEDIN_ACCOUNT_URL = "https://www.linkedin.com/in/benjamin-delaunay-guitton";
 export const GITHUB_ACCOUNT_URL = "https://github.com/Benjamin-DG44";
-
-// URL Drive récapitulatif
-export const G_DRIVE_RECAP = "https://drive.google.com/drive/folders/15UxLbo_Xv-9o1U0dvvWweL1_6dpBeoTP?usp=drive_link";
 
 // URL Veilles technologiques
 export const G_DRIVE_PROJET_VEILLE_1 = "https://drive.google.com/drive/folders/1Ba5AhQxRTwfiP94kEBitjXnlfeJ6xD5a?usp=drive_link";

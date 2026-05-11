@@ -2,7 +2,7 @@ import * as React from "react";
 import "./Home.css";
 import {Link} from "react-scroll";
 import Button from "../../../components/Button/Button";
-import {ABOUT_URL, HOME_URL, PDF_CV, PROJECTS_URL} from "../../../constants/URL";
+import {ABOUT_URL, HOME_URL, PDF_CV, PROJECTS_URL, TABLEAU_BTS} from "../../../constants/URL";
 import {ChevronDown} from "lucide-react";
 import FadeAnimation from "../../../components/FadeAnimation/FadeAnimation";
 
@@ -46,11 +46,13 @@ function Home() {
                 <FadeAnimation direction="down" delay={200}>
                     <div className="button-group">
                         {/* TODO : à modifier une fois le passage à l'oral fini*/}
-                        <Button variant="primary"
-                                animation="btn-slide"
-                                to={PROJECTS_URL}
-                        > {/*  */}
-                            <p className="text-lg-bold">Voir mon travail</p>
+                        <Button variant="primary" onClick={() => window.open(TABLEAU_BTS)} animation="btn-slide"> {/* to={PROJECTS_URL} */}
+                            <p className="text-lg-bold">Voir tableau</p>
+                        {/*<Button variant="primary"*/}
+                        {/*        animation="btn-slide"*/}
+                        {/*        to={TABLEAU_BTS}*/}
+                        {/*> /!*  *!/*/}
+                        {/*    <p className="text-lg-bold">Voir mon travail</p>*/}
                         </Button>
                         <Button variant="secondary" onClick={() => window.open(PDF_CV)}>
                             <p className="text-lg-bold">Télécharger CV</p>

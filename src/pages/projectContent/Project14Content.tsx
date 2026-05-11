@@ -11,6 +11,7 @@ import {getProjectImage} from "../../utils/getUtils";
 
 export default function Project14Content() {
     const RAPPORT_STAGE_2 = "https://drive.google.com/file/d/11jA1sPj7hUHlbja2Yyj1CMEvsg-oFR1n/view?usp=drive_link";
+    const CR_HEBDOMADAIRE = "https://drive.google.com/drive/folders/1Zfuqv6fbEESWNG_rz6WAW1lngcGed-p6?usp=drive_link";
     const VIDEO_DEMONSTRATION = "https://drive.google.com/file/d/1kgcZaCorbNpWJl1-5ViAuZvSwyt6YK_2/view?usp=drive_link";
 
     return (
@@ -29,6 +30,7 @@ export default function Project14Content() {
                     fonctionnalités que nous n'avions pas eu le temps de développer au stage précédent et pour certaines
                     les adapter à la nouvelle API. {" "}
                     <ProjectContentLink href={RAPPORT_STAGE_2} text={"Rapport de stage n°2"}/>{" "}
+                    <ProjectContentLink href={CR_HEBDOMADAIRE} text={"Compte-rendu hebdomadaire"}/>{" "}
                     <ProjectContentLink href={VIDEO_DEMONSTRATION} text={"Vidéo de démonstration de l'application"}/>
                 </ProjectContentText>
                 <ProjectContentOriginalBTSSkill skill={getOriginalBTSSkill(CATEGORY_2, 2)}/>
